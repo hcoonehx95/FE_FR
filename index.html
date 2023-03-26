@@ -1,411 +1,271 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPT Polytechnic</title>
-	
-	<!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-   
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <script src="js/bootstrap.min.js"></script>
-	<!-- Poly -->
-    <link href="css/poly.css" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPT Polytechnic</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Poly -->
+  <link href="css/poly.css" rel="stylesheet" />
 </head>
+
 <body>
-    <div class="container">
-        <header class="row">
-        	<!-- <div class="shopping-mall">
+  <div class="container">
+    <header class="row">
+      <!-- <div class="shopping-mall">
 	            <h1>Online shopping mall</h1>
 	            <h5>The center point of the professional programming</h5>
             </div> -->
-            <img width="100%" src="images/banner.png" />
-        </header>
-        <nav class="row">
-            <div class="navbar navbar-inverse">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <!--Menu-->
-                    <ul class="nav navbar-nav">
-                        <li><a class="navbar-brand" href="#">FPT Polytechnic</a></li> 
-                        <li><a href=""><span class="glyphicon glyphicon-home"></span> Trang chủ</a></li>
-                        <li><a href=""><span class="glyphicon glyphicon-th-list"></span> Giới thiệu</a></li>
-                        <li><a href=""><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
-                        <li><a href=""><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
-                        <li><a href=""><span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Tài khoản <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="" data-toggle="modal" data-target="#exampleModal">Đăng nhập</a></li>
-                                <li><a href="">Quên mật khẩu</a></li>
-                                <li><a href=""> <span class="glyphicon glyphicon-plus-sign"></span> Đăng ký thành viên</a></li>
-                                <li class="divider"></li>
-                                <li><a href=""><span class="glyphicon glyphicon-off"></span> Đăng xuất</a></li>
-                                <li><a href=""><span class="glyphicon glyphicon-edit"></span> Đổi mật khẩu</a></li>
-                                <li><a href=""><span class="glyphicon glyphicon-edit"></span> Cập nhật hồ sơ</a></li>
-                                <li class="divider"></li>
-                                <!-- <li><a href="">Đơn hàng</a></li>
+      <img width="100%" src="images/banner.png" />
+    </header>
+    <nav class="row">
+      <div class="navbar navbar-inverse">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <!--Menu-->
+          <ul class="nav navbar-nav">
+            <li><a class="navbar-brand" href="./index.html">FPT Polytechnic</a></li>
+            <li><a href="./index.html"><span class="glyphicon glyphicon-home"></span> Trang chủ</a></li>
+            <li><a href="./gioithieu.html"><span class="glyphicon glyphicon-th-list"></span> Giới thiệu</a>
+            </li>
+            <li><a href="./lienhe.html"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
+            <li><a href=""><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
+            <li><a href=""><span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
+                Tài khoản <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="" data-toggle="modal" data-target="#exampleModal">Đăng nhập</a></li>
+                <li><a href="">Quên mật khẩu</a></li>
+                <li><a href=""> <span class="glyphicon glyphicon-plus-sign"></span> Đăng ký thành
+                    viên</a></li>
+                <li class="divider"></li>
+                <li><a href=""><span class="glyphicon glyphicon-off"></span> Đăng xuất</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-edit"></span> Đổi mật khẩu</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-edit"></span> Cập nhật hồ sơ</a></li>
+                <li class="divider"></li>
+                <!-- <li><a href="">Đơn hàng</a></li>
                                 <li><a href="">Hàng đã mua</a></li> -->
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="">English</a></li>
-                        <li><a href="">Tiếng Việt</a></li>
-                    </ul>
-                    <!--Menu-->
-                </div>
-            </div>
-        </nav>
-        
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="">English</a></li>
+            <li><a href="">Tiếng Việt</a></li>
+          </ul>
+          <!--Menu-->
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
 
-            <article class="col-sm-9">
-                <!--    lien he -->
-                
-                <!--Nội dung trang web-->
-                <!-- .<div class="jumbotron">
-                    <h1 class="display-4">Front-end Framework</h1>
-                    
-                    <hr class="my-4">
-                    <p>Bootstrap là 1 framwork cho phép thiết kế website responsive</p>
-                    <p>
-                        <a class="btn btn-primary" data-toggle="collapse" href="#contentId" aria-expanded="false" aria-controls="contentId">
-                          Show
-                        </a>
-                      </p>
-                      <div class="collapse" id="contentId">
-                        <p>Bootstrap là 1 framwork</p>
-                      </div>
-                </div> -->
-                <!-- slider -->
-                <!-- <div class="row">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                          <div class="item active">
-                            <img class="" src="./images/products/1005.jpg" alt="First slide">
-                          </div>
-                          <div class="item">
-                            <img class="" src="./images/products/1006.jpg" alt="Second slide">
-                          </div>
-                          <div class="item">
-                            <img class="" src="./images/products/1015.jpg" alt="Third slide">
-                          </div>
-                        </div>
-                        <a class="carousel-control left" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="icon-prev">Previous</span>
-                          </a>
-                          <a class="carousel-control right" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="icon-next">Next</span>
-                          </a>
-                      </div>
-                     
-                </div> -->
-                <!-- <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <a href="" class="thumbnail">
-                                <img src="./images/products/1009.jpg" alt="">
-                            </a>
-                            <div class="caption">
-                                <p>Yêu cầu khách hàng cung cấp giấy chứng nhận tiêu chuẩn chất lượng và giấy
-                                    xác nhận nội dung quảng cáo của sản phẩm đối với các khách hàng kinh doanh...
-                                    <a href="" class="btn btn-info btn-sm"> Chi tiết</a>
-                                </p>
-                                
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <a href="" class="thumbnail">
-                                <img src="./images/products/1009.jpg" alt="">
-                            </a>
-                            <div class="caption">
-                                <p>Yêu cầu khách hàng cung cấp giấy chứng nhận tiêu chuẩn chất lượng và giấy
-                                    xác nhận nội dung quảng cáo của sản phẩm đối với các khách hàng kinh doanh...
-                                    <a href="" class="btn btn-info btn-sm"> Chi tiết</a>
-                                </p>
-                                
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <a href="" class="thumbnail">
-                                <img src="./images/products/1009.jpg" alt="">
-                            </a>
-                            <div class="caption">
-                                <p>Yêu cầu khách hàng cung cấp giấy chứng nhận tiêu chuẩn chất lượng và giấy
-                                    xác nhận nội dung quảng cáo của sản phẩm đối với các khách hàng kinh doanh... 
-                                    <a href="" class="btn btn-info btn-sm"> Chi tiết</a>
-                                </p>
-                                
-                            </div>
-                        </div>
+            <div class="modal-body">
+              <div class="form-signin " id="form-signin">
+                <div class="form-container sign-up-container">
+                  <form action="#">
+                    <h1 class="h1-sign-up">Create Account</h1>
+                    <div class="social-container">
+                      <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                      <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <div class="row text-center">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination ">
-                                <li class="page-item active" aria-current="page">
-                                    <a class="page-link" href="#"> <span class="glyphicon glyphicon-hand-up"></span></a>
-                                </li>
-                                <li class="page-item ">
-                                    <a class="page-link" href="#" ><span class="glyphicon glyphicon-hand-left"></span></a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#"><span class="glyphicon glyphicon-hand-right"></span></a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#"><span class="glyphicon glyphicon-hand-down"></span></a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <span>or use your email for registration</span>
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <button class="btn-sign-up">Sign Up</button>
+                  </form>
+                </div>
+                <div class="form-container sign-in-container">
+                  <form action="#">
+                    <h1 class="h1-sign-up">Sign in</h1>
+                    <div class="social-container">
+                      <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                      <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                </div> -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                       
-                        <div class="modal-body"  >
-                            <div class="form-signin " id="form-signin">
-                                <div class="form-container sign-up-container">
-                                    <form action="#">
-                                        <h1 class="h1-sign-up">Create Account</h1>
-                                        <div class="social-container">
-                                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                        <span>or use your email for registration</span>
-                                        <input type="text" placeholder="Name" />
-                                        <input type="email" placeholder="Email" />
-                                        <input type="password" placeholder="Password" />
-                                        <button class="btn-sign-up">Sign Up</button>
-                                    </form>
-                                </div>
-                                <div class="form-container sign-in-container">
-                                    <form action="#">
-                                        <h1 class="h1-sign-up">Sign in</h1>
-                                        <div class="social-container">
-                                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                        <span>or use your account</span>
-                                        <input type="email" placeholder="Email" />
-                                        <input type="password" placeholder="Password" />
-                                        <a href="#">Forgot your password?</a>
-                                        <button class="btn-sign-up">Sign In</button>
-                                    </form>
-                                </div>
-                                <div class="overlay-container">
-                                    <div class="overlay">
-                                        <div class="overlay-panel overlay-left">
-                                            <h1 class="h1-sign-up">Welcome Back!</h1>
-                                            <p class="p-over">To keep connected with us please login with your personal info</p>
-                                            <button class="btn-sign-up ghost" id="signIn">Sign In</button>
-                                        </div>
-                                        <div class="overlay-panel overlay-right">
-                                            <h1 class="h1-sign-up">Hello, Friend!</h1>
-                                            <p  class="p-over">Enter your personal details and start journey with us</p>
-                                            <button class="btn-sign-up ghost" id="signUp">Sign Up</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <!-- <div class="modal-footer">
+                    <span>or use your account</span>
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <a href="#">Forgot your password?</a>
+                    <button class="btn-sign-up">Sign In</button>
+                  </form>
+                </div>
+                <div class="overlay-container">
+                  <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                      <h1 class="h1-sign-up">Welcome Back!</h1>
+                      <p class="p-over">To keep connected with us please login with your personal
+                        info</p>
+                      <button class="btn-sign-up ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                      <h1 class="h1-sign-up">Hello, Friend!</h1>
+                      <p class="p-over">Enter your personal details and start journey with us</p>
+                      <button class="btn-sign-up ghost" id="signUp">Sign Up</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- <div class="modal-footer">
                             
                         </div> -->
-                    </div>
-                    </div>
-                </div>
-            </article>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-            <aside class="col-sm-3">
-                <!--CartInfo-->
-                <!-- <div class="poly-cart">
-	                <div class="panel panel-default">
-	                    <div class="panel-body">
-	                        <img class="col-sm-5" src="images/shoppingcart.gif" />
-	                        <ul class="col-sm-7">
-	                            <li>100 items</li>
-	                            <li>$ 56.8</li>
-	                            <li><a href="">View Cart</a></li>
-	                        </ul>
-	                    </div>
-	                </div>
-                </div> -->
-                <!--/CartInfo-->
 
-                <!--Search-->
-                <!-- <div class="nn-cart">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <form method="post" action="/Product/Search">
-                                <input placeholder="Keywords" name="Keywords" class="form-control" />
-                            </form>
-                        </div>
-                    </div>
-                </div> -->
-                <!--/Search-->
-               <div id="accordianId" role="tablist" aria-multiselectable="true">
-                <div class="card">
-                    <div class="card-header" role="tab" id="section1HeaderId">
-                        <h5 class="mb-0">
-                            <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId" aria-expanded="true" aria-controls="section1ContentId">
-                                <div class="panel-heading">
-                                    <span class="glyphicon glyphicon-th-list"></span>
-                                    <strong>Chủng loại</strong>
-                                </div>
-            
-                       </a>
-                        </h5>
-                    </div>
-                    <div id="section1ContentId" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
-                        <div class="card-body">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">Điện thoại di động <span class="badge">20</span></a>
-                                <a href="#" class="list-group-item">Máy tính xách tay <span class="badge badge-primary">6</span></a>
-                                <a href="#" class="list-group-item">Máy tính để bàn<span class="badge badge-primary">26</span></a>
-                                <a href="#" class="list-group-item">Quạt máy<span class="badge badge-primary">5</span></a>
-                                <a href="#" class="list-group-item">Tivi<span class="badge badge-primary">16</span> </a>
-                                <a href="#" class="list-group-item">Tủ lạnh<span class="badge badge-primary">8</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" role="tab" id="section2HeaderId">
-                        <h5 class="mb-0">
-                            <a data-toggle="collapse" data-parent="#accordianId" href="#section2ContentId" aria-expanded="true" aria-controls="section2ContentId">
-                         
-                        <div class="panel-heading">
-                            <span class="glyphicon glyphicon-list-alt"></span>
-                            <strong>Nhà cung cấp</strong>
-                        </div>
-                       </a>
-                        </h5>
-                    </div>
-                    <div id="section2ContentId" class="collapse" role="tabpanel" aria-labelledby="section2HeaderId">
-                        <div class="card-body">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">Apple</a>
-                                <a href="#" class="list-group-item">Samsung</a>
-                                <a href="#" class="list-group-item">Nokia</a>
-                                <a href="#" class="list-group-item">GL</a>
-                                <a href="#" class="list-group-item">Sony Ericson</a>
-                                <a href="#" class="list-group-item">Dell</a>
-                                <a href="#" class="list-group-item">Acer</a>
-                                <a href="#" class="list-group-item">HP</a>
-                                <a href="#" class="list-group-item">Toshiba</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" role="tab" id="section2HeaderId">
-                        <h5 class="mb-0">
-                            <a data-toggle="collapse" data-parent="#accordianId" href="#section3ContentId" aria-expanded="true" aria-controls="section3ContentId">
-                         
-                                <div class="panel-heading">
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <strong>Hàng đặc biệt</strong>
-                                </div>
-                       </a>
-                        </h5>
-                    </div>
-                    <div id="section3ContentId" class="collapse" role="tabpanel" aria-labelledby="section3HeaderId">
-                        <div class="card-body">
-                            
-                    <div class="list-group">
-                        <a href="#" class="list-group-item">Hàng bán chạy</a>
-                        <a href="#" class="list-group-item">Hàng mới</a>
-                        <a href="#" class="list-group-item">Hàng giảm giá</a>
-                        <a href="#" class="list-group-item">Hàng đặc biệt</a>
-                        <a href="#" class="list-group-item">Hàng xem nhiều</a>
-                    </div>
-                        </div>
-                    </div>
-                </div>
-               </div>
-                <!--Category-->
-                <!-- <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <span class="glyphicon glyphicon-th-list"></span>
-                        <strong>Chủng loại</strong>
-                    </div>
-
-                    <div class="list-group">
-                        <a href="#" class="list-group-item">Điện thoại di động</a>
-                        <a href="#" class="list-group-item">Máy tính xách tay</a>
-                        <a href="#" class="list-group-item">Máy tính để bàn</a>
-                        <a href="#" class="list-group-item">Quạt máy</a>
-                        <a href="#" class="list-group-item">Tivi</a>
-                        <a href="#" class="list-group-item">Tủ lạnh</a>
-                    </div>
-                </div> -->
-                <!--/Category-->
-
-                <!--Supplier-->
-                <!-- <div class="panel panel-default">
-
-                    <div class="panel-heading">
-                        <span class="glyphicon glyphicon-list-alt"></span>
-                        <strong>Nhà cung cấp</strong>
-                    </div>
-
-                    <div class="list-group">
-                        <a href="#" class="list-group-item">Apple</a>
-                        <a href="#" class="list-group-item">Samsung</a>
-                        <a href="#" class="list-group-item">Nokia</a>
-                        <a href="#" class="list-group-item">GL</a>
-                        <a href="#" class="list-group-item">Sony Ericson</a>
-                        <a href="#" class="list-group-item">Dell</a>
-                        <a href="#" class="list-group-item">Acer</a>
-                        <a href="#" class="list-group-item">HP</a>
-                        <a href="#" class="list-group-item">Toshiba</a>
-                    </div>
-                </div> -->
-                <!--/Supplier-->
-
-                <!--Special-->
-                <!-- <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                        <strong>Hàng đặc biệt</strong>
-                    </div>
-
-                    <div class="list-group">
-                        <a href="#" class="list-group-item">Hàng bán chạy</a>
-                        <a href="#" class="list-group-item">Hàng mới</a>
-                        <a href="#" class="list-group-item">Hàng giảm giá</a>
-                        <a href="#" class="list-group-item">Hàng đặc biệt</a>
-                        <a href="#" class="list-group-item">Hàng xem nhiều</a>
-                    </div>
-                </div> -->
-                <!--/Special-->
-
-            </aside>
-       
-
-        <footer class="panel panel-default row">
-            <div class="panel-heading text-center">
-                <p>FPT Polytechnic &copy; 2017. All rights reserved.</p>
+    <article class="col-md-9 text-center">
+      <div class="col-sm-6 poly-prod">
+        <a href="#">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                Lập trình PHP
+              </h4>
             </div>
-        </footer>
+            <div class="panel-body">
+              <img src="./images/logos/PHPP.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6 poly-prod">
+        <a href="#">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                Lập trình ASP.NET
+              </h4>
+            </div>
+            <div class="panel-body">
+              <img src="./images/logos/ASNE.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6 poly-prod">
+        <a href="#">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                Thiết kế layout trên android
+              </h4>
+            </div>
+            <div class="panel-body">
+              <img src="./images/logos/ADBS.jpg" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6 poly-prod">
+        <a href="#">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                Lập trình hướng đối tượng với java
+              </h4>
+            </div>
+            <div class="panel-body">
+              <img src="./images/logos/JAAV.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </article>
+
+    <aside class="col-md-3">
+
+      <div class="panel panel-default mt-4">
+        <div class="panel-body">
+          <form style="flex-direction: inherit; padding: 0;" class="form-inline">
+            <input class="form-control col-sm-9" type="search" placeholder="Search" aria-label="Search">
+            <button style="background: none!important;" class="btn" type="submit"><span
+                class="glyphicon glyphicon-search"></span></button>
+          </form>
+        </div>
+      </div>
+      <div class="panel-group" id="accordion">
+        <div style="" class="panel panel-default">
+          <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+            <span class="glyphicon glyphicon-th-list"></span> <strong>Danh Mục</strong>
+          </div>
+          <ul id="collapse1" class="list-group panel-collapse collapse in" style="height: 0px;">
+            <li class="list-group-item "><a href="#"> Kiểm thử và triển khai</a><span class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">SQL server</a><span class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">Lập trình PHP</a><span class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">Lập trình Android cơ bản</a><span class="label badge">12</span>
+            </li>
+            <li class="list-group-item "><a href="#">Lập trình Android nâng cao</a><span class="label badge">12</span>
+            </li>
+            <li class="list-group-item "><a href="#">Thiết kế layout</a><span class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">Thiết kế layout trên android</a><span class="label badge">12</span>
+            </li>
+            <li class="list-group-item "><a href="#">Quản lý dự án với angle</a><span class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">Lập trình hướng đối tượng với java</a><span
+                class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">Internet Marketing</a><span class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">Lập trình ASP.NET</a><span class="label badge">12</span></li>
+          </ul>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+            <span class="glyphicon glyphicon-list-alt"></span> <strong>Tin Tuc</strong>
+          </div>
+          <ul id="collapse2" class="list-group panel-collapse collapse" style="height: 0px;">
+            <li class="list-group-item ">Apple</li>
+            <li class="list-group-item ">Asus</li>
+            <li class="list-group-item ">Vivo</li>
+            <li class="list-group-item ">Lenovo</li>
+            <li class="list-group-item ">MSI</li>
+            <li class="list-group-item ">HP</li>
+          </ul>
+        </div>
+        <!-- <div class="panel panel-default">
+          <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+            <span class="glyphicon glyphicon-star-empty"></span> <strong>Hàng đặt biệt</strong>
+          </div>
+          <ul id="collapse3" class="list-group panel-collapse collapse">
+            <li class="list-group-item ">Hàng bán chạy</li>
+            <li class="list-group-item ">Hàng mới</li>
+            <li class="list-group-item ">Hàng giảm giá</li>
+            <li class="list-group-item ">Hàng đặt biệt</li>
+
+          </ul>
+        </div> -->
+      </div>
+
+    </aside>
+
+  </div>
+  <footer style="padding: 0;" class="panel panel-default container">
+    <div class="panel-heading text-center">
+      <p>FPT Polytechnic &copy; 2017. All rights reserved.</p>
     </div>
+  </footer>
+
+
+  <!-- jQuery -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>

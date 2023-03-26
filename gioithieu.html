@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPT Polytechnic</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- Poly -->
+  <link rel="stylesheet" href="css/poly.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="row">
+      <!-- <div class="shopping-mall">
+	            <h1>Online shopping mall</h1>
+	            <h5>The center point of the professional programming</h5>
+            </div> -->
+      <img width="100%" src="images/banner.png" />
+    </header>
+    <nav class="row">
+      <div class="navbar navbar-inverse">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <!--Menu-->
+          <ul class="nav navbar-nav">
+            <li><a class="navbar-brand" href="./index.html">FPT Polytechnic</a></li>
+            <li><a href="./index.html"><span class="glyphicon glyphicon-home"></span> Trang chủ</a></li>
+            <li><a href="./gioithieu.html"><span class="glyphicon glyphicon-th-list"></span> Giới thiệu</a></li>
+            <li><a href="./lienhe.html"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
+            <li><a href=""><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
+            <li><a href=""><span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
+                Tài khoản <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="" data-toggle="modal" data-target="#exampleModal">Đăng nhập</a></li>
+                <li><a href="">Quên mật khẩu</a></li>
+                <li><a href=""> <span class="glyphicon glyphicon-plus-sign"></span> Đăng ký thành viên</a></li>
+                <li class="divider"></li>
+                <li><a href=""><span class="glyphicon glyphicon-off"></span> Đăng xuất</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-edit"></span> Đổi mật khẩu</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-edit"></span> Cập nhật hồ sơ</a></li>
+                <li class="divider"></li>
+                <!-- <li><a href="">Đơn hàng</a></li>
+                                <li><a href="">Hàng đã mua</a></li> -->
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="">English</a></li>
+            <li><a href="">Tiếng Việt</a></li>
+          </ul>
+          <!--Menu-->
+        </div>
+      </div>
+    </nav>
+
+
+    <article class="col-sm-12">
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="container">
+            <h2></h2>
+            <div class="container" id="container">
+              <div class="form-container sign-up-container login-box">
+                <form action="#">
+                  <h1>Create Account</h1>
+                  <div class="user-box">
+                    <input type="text" name="" required="">
+                    <label>Username</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="email" name="" required="">
+                    <label>Email</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="password" name="" required="">
+                    <label>Password</label>
+                  </div>
+                  <button>Register</button>
+                </form>
+              </div>
+              <div class="form-container sign-in-container login-box">
+                <form action="#">
+                  <h1>Login</h1>
+                  <div class="user-box">
+                    <input type="text" name="" required="">
+                    <label>Username</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="password" name="" required="">
+                    <label>Password</label>
+                  </div>
+                  <a href="#">Forgot your password?</a>
+                  <button>Login</button>
+                </form>
+              </div>
+              <div class="overlay-container">
+                <div class="overlay">
+                  <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Login</button>
+                  </div>
+                  <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Register</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <footer>
+
+            </footer>
+          </div>
+        </div>
+      </div>
+      </nav>
+
+      <!-- CONTENT -->
+      <div class="main row">
+
+        <article class="col-md-12">
+          <div class="col-12 p-1 pull-center">
+            <div class="col-12 p-1 d-flex">
+              <div class="col-12 h3 text-primary p-1 pl-2 mt-4 mb-2"> Giới Thiệu </div>
+
+            </div>
+            <div class="col-12 py-1 pl-3 pr-3 pl-md-4 pr-md-4 pl-lg-5 pr-lg-5"
+              style="font-family: Nunito; text-align: justify">
+              <p class="lh-3 fz-4"> <span class="text-success">Online Traning</span> được thành lập để tạo ra một Thư
+                Viện các Đề Thi FPT Polytechnic. Các đề thi được tổng hợp và chọn lọc từ các đề thi
+                chính thức, tham khảo của Bộ Giáo Dục, các Sở Giáo Dục và các Trường Chuyên trong cả nước. Hy vọng Thi
+                Thử
+                Online sẽ là nguồn tài liệu tham khảo hữu ích cho các bạn học sinh (và giáo viên) để chuẩn bị tốt nhất
+                cho
+                kỳ thi đại học hay thi THPT Quốc gia. Hãy đăng ký thành viên và bắt đầu Thi Thử Online hoàn toàn miễn
+                phí.
+                Bài làm sẽ được chấm điểm ngay sau khi Nộp bài và được lưu lại trong phần Bảng Điểm của từng thành viên
+                để
+                cho các bạn tiện theo dõi.</p>
+
+              <p class="lh-3 fz-4"> Nếu các bạn thấy trang <span class="text-success">Online Traning</span> hữu ích,
+                các
+                bạn hãy ấn <span class="text-info">"Thích"</span> và <span class="text-info">"Chia sẻ"</span> để cho
+                nhiều
+                người cùng sử dụng (khi đó các bạn sẽ được <span class="text-info">thi thử miễn phí</span> không bị giới
+                hạn bởi số đề thi). Và khi có nhiều người cùng sử dụng trang Thi Thử Online, chúng tôi sẽ cập nhật càng
+                nhiều đề thi, đáp án và nhiều tính năng khác nữa.</p>
+
+              <!--p class="lh-3 fz-4"> Trang web này là hoàn toàn miễn phí, lập ra với mục đích phi lợi nhuận và tạo điều kiện giúp cho tất cả các bạn học sinh có điều kiện học tập như nhau bất kể vùng miền. Nếu bạn thấy trang web này hữu ích, hãy <a href="https://thithu.edu.vn/donation">Donate cho chúng tôi tại đây</a>, để chúng tôi thêm nhiều đề thi, tính năng mới. Cảm ơn. </p-->
+
+              <!--p class="lh-3 fz-4 text-dark border border-primary rounded m-1 p-2"><i> Hiện nay chúng tôi đang tìm kiếm các bạn Cộng Tác Viên để giúp hoàn thiện đáp án cụ thể cho các câu hỏi đã có, nếu bạn nào có kinh nghiệm về Latex/Mathjax (và không phải thi tốt nghiệp năm nay) và muốn tham gia làm cộng tác viên xin hãy <a href="https://thithu.edu.vn/emails/tuyenctv"> <u>Liên Hệ</u></a> với chúng tôi. </i></p-->
+
+            </div>
+            <div class="col-12 h3 text-primary pt-1 mt-1 mb-2"> Tuyển Chọn Các Đề Thi </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="col-12 p-1">
+                  <div class="box box-info">
+
+                    <div class="box-body p-1 row">
+                      <!-- De thi ngan - de_this_sortBy_best_score -->
+                      <div style="height: 23px;" class="col-12 text-left">
+                        <div class="col-md-10">
+                          <a class="text-dark" href="#">Lap Trinh JavaScript nang cao - <span class="label label-danger">Đề số: 1</span> </a>
+                        </div>
+                        <div class="col-md-2 p-0 text-right">
+                          <span class="text-center pb-0">
+                            <a class="btn btn-sm btn-primary p-1" style="width:70px; margin-top:0px;" href="#">
+                              Thi Thử </a> &nbsp;
+                          </span>
+                        </div>
+                      </div><br>
+
+                      <div style="height: 23px;" class="col-12 text-left">
+                        <div class="col-md-10">
+                          <a class="text-dark" href="#">Lap Trinh PHP3 framework - <span class="label label-danger">Đề số: 1</span> </a>
+                        </div>
+                        <div class="col-md-2 p-0 text-right">
+                          <span class="text-center pb-0">
+                            <a class="btn btn-sm btn-primary p-1" style="width:70px; margin-top:0px;" href="#">
+                              Thi Thử </a> &nbsp;
+                          </span>
+                        </div>
+                      </div><br>
+
+                      <div style="height: 23px;" class="col-12 text-left">
+                        <div class="col-md-10">
+                          <a class="text-dark" href="#">Front-End framework - <span class="label label-danger">Đề số: 1</span> </a>
+                        </div>
+                        <div class="col-md-2 p-0 text-right">
+                          <span class="text-center pb-0">
+                            <a class="btn btn-sm btn-primary p-1" style="width:70px; margin-top:0px;" href="#">
+                              Thi Thử </a> &nbsp;
+                          </span>
+                        </div>
+                      </div><br>
+
+                      <div style="height: 23px;" class="col-12 text-left">
+                        <div class="col-md-10">
+                          <a class="text-dark" href="#">Kiem thu co ban - <span class="label label-danger">Đề số: 1</span> </a>
+                        </div>
+                        <div class="col-md-2 p-0 text-right">
+                          <span class="text-center pb-0">
+                            <a class="btn btn-sm btn-primary p-1" style="width:70px; margin-top:0px;" href="#">
+                              Thi Thử </a> &nbsp;
+                          </span>
+                        </div>
+                      </div><br>
+
+                      <div style="height: 23px;" class="col-12 text-left">
+                        <div class="col-md-10">
+                          <a class="text-dark" href="#">Lap Trinh ReactJS - <span class="label label-danger">Đề số: 1</span> </a>
+                        </div>
+                        <div class="col-md-2 p-0 text-right">
+                          <span class="text-center pb-0">
+                            <a class="btn btn-sm btn-primary p-1" style="width:70px; margin-top:0px;" href="#">
+                              Thi Thử </a> &nbsp;
+                          </span>
+                        </div>
+                      </div><br>
+
+                      <br>
+                      <hr>
+                      <p class="text-right mt-2 mr-2"> 
+                        <a class="text-primary" href="#">
+                          <b><i> Còn nữa &nbsp;&nbsp; </i></b>
+                        </a> 
+                      </p>
+                      <hr>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                <div class="col-12 p-3" style="font-family: Nunito; text-align: justify">
+                  <p class="lh-3 fz-4"> Trang Web này đang trong quá trình hoàn thiện và sẽ thêm nhiều câu hỏi, đề thi
+                    cũng
+                    như tính năng mới. Nếu bạn có đóng góp ý kiến về trang Web để được hoàn thiện hơn (hoặc gửi đề thi
+                    mới
+                    cho chúng tôi), các bạn hãy <a href="https://thithu.edu.vn/emails/feedback"> Liên Hệ </a> với chúng
+                    tôi.
+                    Trân trọng cảm ơn! </p>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <!-- <div class="col-12 p-1"> -->
+                <div class="card panel panel-default">
+
+                  <div class="panel-heading">
+                    <strong>Đăng nhập</strong>
+                  </div>
+                  <div class="card-body">
+                    <!-- <div class="row"> -->
+                    <div class="box-login">
+                      <a href="#" class="btn btn-danger" style="width:170px"><i class="fa fa-google"></i> Google</a>
+
+                    </div>
+                    <div class="box-login">
+                      <a class="btn btn-primary btn-sm" style="width:170px;" href="#">Đăng
+                        Nhập Bằng Email</a>
+                    </div>
+                    <!-- </div> -->
+                  </div>
+                </div>
+                <!-- </div> -->
+
+                <div class="card panel panel-default p-1 text-secondary">
+                  <div class="panel-heading">
+                    <strong> Đăng Ký </strong>
+                  </div>
+                  <div class="card-body">
+                    <form style="align-items: normal; text-align: left; margin-top: 12px;" method="POST">
+                      <label for="name" class="col-12 p-1">Họ Tên</label>
+                      <div class="col-12 p-1">
+                        <input id="name" type="text" class="form-control " name="name" value="" required=""
+                          autocomplete="name">
+                      </div>
+
+                      <label for="email" class="col-12 p-1">E-Mail</label>
+                      <div class="col-12 p-1">
+                        <input id="email" type="email" class="form-control " name="email" value="" required=""
+                          autocomplete="email">
+                      </div>
+
+                      <label for="password" class="col-12 p-1">Mật Khẩu</label>
+                      <div class="col-12 p-1">
+                        <input id="password" type="password" class="form-control " name="password" required=""
+                          autocomplete="new-password">
+                      </div>
+
+                      <label for="password-confirm" class="col-12 p-1">Nhập Lại</label>
+                      <div class="col-12 p-1">
+                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
+                          required="" autocomplete="new-password">
+                      </div>
+
+                      <div class="col-12 p-1 text-center">
+                        <button type="submit" class="btn btn-sm btn-success"
+                          style="padding-left: 10px; padding-right: 20px; margin-bottom: 10px;">
+                          <i class="fa fa-key fa-fw"></i> ĐĂNG KÝ
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- <div class="col-12 col-lg-4 p-1 pull-right">
+              <div class="col-12 p-1">
+                <div class="col-12 p-1">
+                  <div class="card panel panel-default">
+                    
+                    <div class="panel-heading">
+                      <strong>Đăng nhập</strong>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-12 d-flex justify-content-center p-1">
+                          <a href="#" class="btn btn-sm btn-block btn-social btn-google" style="width:170px"><i
+                              class="fa fa-google"></i> Google</a>
+
+                        </div>
+                        <div class="col-12 d-flex justify-content-center p-1">
+                          <a class="btn btn-primary btn-sm" style="width:170px;" href="#">Đăng
+                            Nhập Bằng Email</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 p-1">
+                  <div class="card p-1 text-secondary">
+                    <div class="card-header">
+                      <strong> Đăng Ký </strong>
+                    </div>
+                    <div class="card-body p-1 fz-2">
+                      <form method="POST" action="https://thithu.edu.vn/register">
+                        <input type="hidden" name="_token" value="3IVzP28smjXCZCWnxmYjNDFnSDcRWwAMOHjucxt4"> <label
+                          for="name" class="col-12 p-1">Họ Tên</label>
+                        <div class="col-12 p-1">
+                          <input id="name" type="text" class="form-control " name="name" value="" required=""
+                            autocomplete="name">
+
+                        </div>
+
+                        <label for="email" class="col-12 p-1">E-Mail</label>
+                        <div class="col-12 p-1">
+                          <input id="email" type="email" class="form-control " name="email" value="" required=""
+                            autocomplete="email">
+                        </div>
+
+                        <label for="password" class="col-12 p-1">Mật Khẩu</label>
+                        <div class="col-12 p-1">
+                          <input id="password" type="password" class="form-control " name="password" required=""
+                            autocomplete="new-password">
+                        </div>
+
+                        <label for="password-confirm" class="col-12 p-1">Nhập Lại</label>
+                        <div class="col-12 p-1">
+                          <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
+                            required="" autocomplete="new-password">
+                        </div>
+
+                        <div class="col-12 p-1">
+                          <button type="submit" class="btn btn-sm btn-success"
+                            style="padding-left: 10px; padding-right: 20px;">
+                            <i class="fa fa-key fa-fw"></i> ĐĂNG KÝ
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div> -->
+      </div>
+    </article>
+
+
+  </div>
+  <footer style="padding: 0;" class="panel panel-default container">
+    <div class="panel-heading text-center">
+      <p>FPT Polytechnic &copy; 2017. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="./js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

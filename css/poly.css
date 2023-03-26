@@ -40,6 +40,12 @@ header{
 	padding: 5px;
 }
 
+.box-login {
+	display: flex;
+	justify-content: center;
+	margin: 12px 0;
+}
+
 /*--ASIDE BOX--*/
 
 .poly-cart{
@@ -82,6 +88,13 @@ header{
     margin: auto;
 }
 
+
+.list-group-item {
+	width: 99%
+}
+.list-group-item a {
+	color: #85909c
+}
 
 /*------------- sign in ----------*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
