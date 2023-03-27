@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+	
+	<!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+   
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+	<!-- Poly -->
+    <link href="css/poly.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="row">
+        	
+            <img width="100%" src="images/banner.png" />
+        </header>
+        <nav class="row">
+            <div class="navbar navbar-inverse">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div class="navbar-collapse collapse">
+                <!--Menu-->
+                <ul class="nav navbar-nav">
+                  <li><a class="navbar-brand" href="./index.html">FPT Polytechnic</a></li>
+                  <li><a href="./index.html"><span class="glyphicon glyphicon-home"></span> Trang chủ</a></li>
+                  <li><a href="./gioithieu.html"><span class="glyphicon glyphicon-th-list"></span> Giới thiệu</a></li>
+                  <li><a href="./lienhe.html"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
+                  <li><a href="./gopy.html"><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
+                  <li><a href=""><span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
+                      Tài khoản <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="" data-toggle="modal" data-target="#exampleModal">Đăng nhập</a></li>
+                      <li><a href="./quenmk.html">Quên mật khẩu</a></li>
+                      <li><a href="" data-toggle="modal" data-target="#my-modal"> <span class="glyphicon glyphicon-plus-sign"></span> Đăng ký thành viên</a></li>
+                      <li class="divider"></li>
+                      <li><a href=""><span class="glyphicon glyphicon-off"></span> Đăng xuất</a></li>
+                      <li><a href=""><span class="glyphicon glyphicon-edit"></span> Đổi mật khẩu</a></li>
+                      <li><a href="./capnhattk.html"><span class="glyphicon glyphicon-edit"></span> Cập nhật hồ sơ</a></li>
+                      <li class="divider"></li>
+                      <!-- <li><a href="">Đơn hàng</a></li>
+                                      <li><a href="">Hàng đã mua</a></li> -->
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="">English</a></li>
+                  <li><a href="">Tiếng Việt</a></li>
+                </ul>
+                <!--Menu-->
+              </div>
+            </div>
+          </nav>
+        
+        <div id="my-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    
+                    <div class="modal-body">
+                        <div class="form-signin " id="form-signin">
+                           
+                            <div class="form-container sign-in-container">
+                                <form class="form-sg" action="#">
+                                    <h1 class="h1-sign-up">Create Account</h1>
+                                    <div class="social-container">
+                                        
+                                    </div>
+                                    <span>or use your email for registration</span>
+                                    <input type="text" placeholder="Name" />
+                                    <label for=""></label>
+                                    <input type="email" placeholder="Email" />
+                                    <label for=""></label>
+                                    <input type="password" placeholder="Password" />
+                                    <button class="btn-sign-up">Sign Up</button>
+                                </form>
+                               
+                            </div>
+                            <div class="overlay-container">
+                                <div class="overlay">
+                                    
+                                    <div class="overlay-panel overlay-right">
+                                        <h1 class="h1-sign-up">Hello, Friend!</h1>
+                                        <p  class="p-over">Enter your personal details and start journey with us</p>
+                                        <button class="btn-sign-up ghost" id="signUp">Sign Up</button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               
+                <div class="modal-body"  >
+                    <div class="form-signin " id="form-signin">
+                        <!-- <div class="form-container sign-up-container">
+                            <form class="form-sg" action="#">
+                                <h1 class="h1-sign-up">Create Account</h1>
+                                <div class="social-container">
+                                    
+                                </div>
+                                <span>or use your email for registration</span>
+                                <input type="text" placeholder="Name" />
+                                <label for=""></label>
+                                <input type="email" placeholder="Email" />
+                                <label for=""></label>
+                                <input type="password" placeholder="Password" />
+                                <button class="btn-sign-up">Sign Up</button>
+                            </form>
+                        </div> -->
+                        <div class="form-container sign-in-container">
+                            <form class="form-sg" action="#">
+                                <h1 class="h1-sign-up">Sign in</h1>
+                                <div class="social-container">
+                                    
+                                </div>
+                                <span>or use your account</span>
+                                <input type="email" placeholder="Email" />
+                                <label for=""></label>
+                                <input type="password" placeholder="Password" />
+                                <a href="#">Forgot your password?</a>
+                                <button class="btn-sign-up">Sign In</button>
+                            </form>
+                        </div>
+                        <div class="overlay-container">
+                            <div class="overlay">
+                                <!-- <div class="overlay-panel overlay-left">
+                                    <h1 class="h1-sign-up">Hello, Friend!</h1>
+                                    <p  class="p-over">Enter your personal details and start journey with us</p>
+                                    <button class="btn-sign-up ghost" id="signUp">Sign Up</button>
+                                </div> -->
+                                <div class="overlay-panel overlay-right">
+                                    <h1 class="h1-sign-up">Welcome Back!</h1>
+                                    <p class="p-over">To keep connected with us please login with your personal info</p>
+                                    <button class="btn-sign-up ghost" id="signIn">Sign In</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+               
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <article class="col-sm-8">
+                <!--    lien he --> 
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        Xây dựng trang Web
+                    </div>
+                    <div class="panel-body ">
+                        <label class="form-check-label">1.Trong kĩ thuật chỉnh nâng cao có những kĩ thuật nào? </label>
+
+                        <form action="">
+                            <div class="form-check ">
+                                <p class="form-check-label">
+                                  <input type="radio" class="form-check-input" name="optradio"> Đối xứng
+                                </p>
+                            </div>
+                              <div class="form-check">
+                                <p class="form-check-label">
+                                  <input type="radio" class="form-check-input" name="optradio"> Bẻ văn bản
+                                </p>
+                              </div>
+                              <div class="form-check">
+                                <p class="form-check-label">
+                                  <input type="radio" class="form-check-input" name="optradio"> Khối văn bản
+                                </p>
+                              </div>
+                              <div class="form-check">
+                                <p class="form-check-label">
+                                  <input type="radio" class="form-check-input" name="optradio"> Không đối xứng
+                                </p>
+                              </div>
+                             
+                                
+                          
+                        </form>
+                    </div>
+                    <div class="panel-footer">
+                            MARKS 0/80
+                    </div>
+                </div>
+                    
+                    
+                
+               
+                
+              
+                
+            </article>
+
+            <aside class="col-sm-4 ">
+                <div class="panel panel-default mt-4">
+                    <div class="panel-body">
+                      <form style="flex-direction: inherit; padding: 0;" class="form-inline">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button style="background: none!important;" class="btn" type="submit"><span
+                            class="glyphicon glyphicon-search"></span></button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="panel-group" id="accordion">
+                    <div  class="panel panel-default">
+                      <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        <span class="glyphicon glyphicon-th-list"></span> <strong>Danh Mục</strong>
+                      </div>
+                      <ul id="collapse1" class="list-group panel-collapse collapse in" style="height: 0px;">
+                        <li class="list-group-item "><a href="#"> Kiểm thử và triển khai</a><span class="label badge">12</span></li>
+                        <li class="list-group-item "><a href="#">SQL server</a><span class="label badge">12</span></li>
+                        <li class="list-group-item "><a href="#">Lập trình PHP</a><span class="label badge">12</span></li>
+                        <li class="list-group-item "><a href="#">Lập trình Android cơ bản</a><span class="label badge">12</span>
+                        </li>
+                        <li class="list-group-item "><a href="#">Lập trình Android nâng cao</a><span class="label badge">12</span>
+                        </li>
+                        <li class="list-group-item "><a href="#">Thiết kế layout</a><span class="label badge">12</span></li>
+                        <li class="list-group-item "><a href="#">Thiết kế layout trên android</a><span class="label badge">12</span>
+                        </li>
+                        <li class="list-group-item "><a href="#">Quản lý dự án với angle</a><span class="label badge">12</span></li>
+                        <li class="list-group-item "><a href="#">Lập trình hướng đối tượng với java</a><span
+                            class="label badge">12</span></li>
+                        <li class="list-group-item "><a href="#">Internet Marketing</a><span class="label badge">12</span></li>
+                        <li class="list-group-item "><a href="#">Lập trình ASP.NET</a><span class="label badge">12</span></li>
+                      </ul>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        <span class="glyphicon glyphicon-list-alt"></span> <strong>Tin Tuc</strong>
+                      </div>
+                      <ul id="collapse2" class="list-group panel-collapse collapse" style="height: 0px;">
+                        <li class="list-group-item ">Apple</li>
+                        <li class="list-group-item ">Asus</li>
+                        <li class="list-group-item ">Vivo</li>
+                        <li class="list-group-item ">Lenovo</li>
+                        <li class="list-group-item ">MSI</li>
+                        <li class="list-group-item ">HP</li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+            
+             
+               
+
+            </aside>
+        </div>
+            
+       
+
+        <footer class="panel panel-default row">
+            <div class="panel-heading text-center">
+                <p>FPT Polytechnic &copy; 2017. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
