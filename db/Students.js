@@ -1,12 +1,12 @@
 ﻿[
     {
-        "username": "teonv",
-        "password": "iloveyou",
-        "fullname": "Nguyễn Văn Tèo",
-        "email": "teonv@fpt.edu.vn",
+        "username": "thuongtv",
+        "password": "1234567",
+        "fullname": "Truong Van Thoung",
+        "email": "thuongtv@fpt.edu.vn",
         "gender": "true",
-        "birthday": "1995-12-21",
-        "schoolfee": "1500000",
+        "birthday": "2001-01-01",
+        "schoolfee": "1700000",
         "marks": "0"
     },
     {
