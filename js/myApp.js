@@ -31,7 +31,7 @@ app.controller("subjectCtrl", function ($scope, $http) {
     $scope.last = function () {
       $scope.begin = ($scope.pageCount - 1) * 4;
     };
-    console.log($scope.begin);
+    // console.log($scope.begin);
   });
 
 });

@@ -1,0 +1,61 @@
+
+  <div class="start_qizz row" ng-show="!inProgess">
+    <div class="col text-center">
+      <div class="btn btn-primary" ng-click="start()">Start qizz poly</div>
+    </div>
+  </div>
+
+  <div ng-show="inProgess">
+    <div class="row countdown_time">
+      <div class="col text-center">
+        <h2>10:00</h2>
+      </div>
+    </div>
+    <!--    lien he -->
+    <div class="panel panel-default">
+      <div class="panel-heading d-flex justify-content-between">
+        <div>
+          <img src="./images/logos/WEBU.jpg" width="25" alt="">
+          <span> Xây dựng trang Web</span>
+        </div>
+        <span>1/10</span>
+      </div>
+      <div class="panel-body ">
+        <label class="form-check-label">1. Trong kĩ thuật chỉnh nâng cao có những kĩ thuật nào? </label>
+        <hr>
+        <form action="">
+
+          <div class="form-check ">
+            <p class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio"> Đối xứng
+            </p>
+          </div>
+          <div class="form-check">
+            <p class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio"> Bẻ văn bản
+            </p>
+          </div>
+          <div class="form-check">
+            <p class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio"> Khối văn bản
+            </p>
+          </div>
+          <div class="form-check">
+            <p class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio"> Không đối xứng
+            </p>
+          </div>
+
+        </form>
+      </div>
+      <div class="panel-footer d-flex justify-content-between">
+        <button class="btn btn-primary">Submit</button>
+        <ul class="pager m-1">
+          <li><a href="#" ng-click="prev()"><span class="glyphicon glyphicon-hand-left"></span></a></li>
+          <li><a href="#" ng-click="next()"><span class="glyphicon glyphicon-hand-right"></span></a></li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+<!-- </article> -->
