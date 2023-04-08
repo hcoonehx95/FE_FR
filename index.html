@@ -166,9 +166,9 @@
     </div>
 
 
-    <article class="col-md-8 text-center list" ng-controller="subjectCtrl">
+    <rowArticle class="col-md-8 text-center list" ng-controller="subjectCtrl">
       <div class="col-sm-6 poly-prod item" ng-repeat="sub in list_subject | limitTo:4:begin">
-        <a href="#">
+        <a href="./thitracnghiem.html">
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
@@ -190,7 +190,7 @@
         <li><a href="#" ng-click="last()"><span class="glyphicon glyphicon-hand-down"></span></a></li>
       </ul>
       <!-- <script src="./js/pagination.js"></script> -->
-    </article>
+    </rowArticle>
 
     <aside class="col-md-4" ng-controller="subjectCtrl">
 
@@ -211,7 +211,7 @@
           </div>
           <ul id="collapse1" class="list-group panel-collapse collapse in" style="height: 0px;">
             <li class="list-group-item " ng-repeat="sub in list_subject">
-              <a href="#">{{sub.Name}}</a>
+              <a href="./thitracnghiem.html">{{sub.Name}}</a>
               <span class="label badge">12</span>
             </li>
           </ul>
