@@ -1,0 +1,64 @@
+<div class="start_qizz row" ng-show="!inProgess">
+  <div class="col text-center">
+    <h3>Start qizz poly (Lập trình Android nâng cao).</h3>
+    <div class="btn btn-primary" ng-click="start()">Start</div>
+  </div>
+</div>
+
+
+<div ng-show="inProgess">
+
+  <div class="start_qizz row" ng-show="quizOver">
+    <div class="col text-center">
+      <h3>Over qizz poly : <span>diem cua ban la ({{score}}d)</span></h3>
+      <div class="btn btn-primary" ng-click="reset()">play again quiz</div>
+    </div>
+  </div>
+
+  <div ng-show="!quizOver">
+    <div class="row countdown_time">
+      <div class="col text-center">
+        <h2 style="color: #2473ff;">
+          <span class="glyphicon glyphicon-time" style="top: 3px;"></span> 
+          <span id="minute"></span> : 
+          <span id="second"></span>
+        </h2>
+      </div>
+    </div>
+    <!--    lien he -->
+    <div class="panel panel-default">
+      <div class="panel-heading d-flex justify-content-between">
+        <div>
+          <img src="./images/logos/WEBU.jpg" width="25" alt="">
+          <span> Xây dựng trang Web</span>
+        </div>
+        <span>{{index+1}}/10</span>
+      </div>
+      <div class="panel-body">
+        <label class="form-check-label"> {{index+1}}. {{question}} </label>
+        <hr>
+        <form action="">
+
+          <div class="form-check " ng-repeat="option in options">
+            <p class="form-check-label">
+              <input type="radio" class="form-check-input" name="answer" value="{{option.Id}}"> {{option.Text}}
+            </p>
+          </div>
+
+        </form>
+      </div>
+      <div class="panel-footer d-flex justify-content-between">
+
+        <button ng-show="answerMode" ng-click="checkAnswer()" class="btn btn-primary">Submit</button>
+        <ul class="pager m-1 float-right">
+          <!-- <li><button ng-click="prevQuestion()"><span class="glyphicon glyphicon-hand-left"></span></button></li> -->
+          <li><button ng-show="!answerMode" ng-click="nextQuestion()"><span
+                class="glyphicon glyphicon-hand-right"></span></button></li>
+        </ul>
+        <span ng-show="correctAns"></span>
+        <span ng-show="!correctAns"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </article> -->

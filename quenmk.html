@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPT Polytechnic</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Poly -->
+  <link href="css/poly.css" rel="stylesheet" />
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+    <path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z"/>
+    <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z"/>
+  </svg>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="row">
+     
+      <img width="100%" src="images/banner.png" />
+    </header>
+    <nav class="row">
+      <div class="navbar navbar-inverse">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <!--Menu-->
+          <ul class="nav navbar-nav">
+            <li><a class="navbar-brand" href="./index.html">FPT Polytechnic</a></li>
+            <li><a href="./index.html"><span class="glyphicon glyphicon-home"></span> Trang chủ</a></li>
+            <li><a href="./gioithieu.html"><span class="glyphicon glyphicon-th-list"></span> Giới thiệu</a></li>
+            <li><a href="./lienhe.html"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
+            <li><a href="./gopy.html"><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
+            <li><a href=""><span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
+                Tài khoản <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="" data-toggle="modal" data-target="#exampleModal">Đăng nhập</a></li>
+                <li><a href="./quenmk.html">Quên mật khẩu</a></li>
+                <li><a href="" data-toggle="modal" data-target="#my-modal"> <span class="glyphicon glyphicon-plus-sign"></span> Đăng ký thành viên</a></li>
+                <li class="divider"></li>
+                <li><a href=""><span class="glyphicon glyphicon-off"></span> Đăng xuất</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-edit"></span> Đổi mật khẩu</a></li>
+                <li><a href="./capnhattk.html"><span class="glyphicon glyphicon-edit"></span> Cập nhật hồ sơ</a></li>
+                <li class="divider"></li>
+                <!-- <li><a href="">Đơn hàng</a></li>
+                                <li><a href="">Hàng đã mua</a></li> -->
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="">English</a></li>
+            <li><a href="">Tiếng Việt</a></li>
+          </ul>
+          <!--Menu-->
+        </div>
+      </div>
+    </nav>
+      <div id="my-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body">
+                    <div class="form-signin " id="form-signin">
+                       
+                        <div class="form-container sign-in-container">
+                            <form class="form-sg" action="#">
+                                <h1 class="h1-sign-up">Create Account</h1>
+                                <div class="social-container">
+                                    
+                                </div>
+                                <span>or use your email for registration</span>
+                                <input type="text" placeholder="Name" />
+                                <label for=""></label>
+                                <input type="email" placeholder="Email" />
+                                <label for=""></label>
+                                <input type="password" placeholder="Password" />
+                                <button class="btn-sign-up">Sign Up</button>
+                            </form>
+                           
+                        </div>
+                        <div class="overlay-container">
+                            <div class="overlay">
+                                
+                                <div class="overlay-panel overlay-right">
+                                    <h1 class="h1-sign-up">Hello, Friend!</h1>
+                                    <p  class="p-over">Enter your personal details and start journey with us</p>
+                                    <button class="btn-sign-up ghost" id="signUp">Sign Up</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+           
+            <div class="modal-body"  >
+                <div class="form-signin " id="form-signin">
+                    
+                    <div class="form-container sign-in-container">
+                        <form class="form-sg" action="#">
+                            <h1 class="h1-sign-up">Sign in</h1>
+                            <div class="social-container">
+                                
+                            </div>
+                            <span>or use your account</span>
+                            <input type="email" placeholder="Email" />
+                            <label for=""></label>
+                            <input type="password" placeholder="Password" />
+                            <a href="#">Forgot your password?</a>
+                            <button class="btn-sign-up">Sign In</button>
+                        </form>
+                    </div>
+                    <div class="overlay-container">
+                        <div class="overlay">
+                           
+                            <div class="overlay-panel overlay-right">
+                                <h1 class="h1-sign-up">Welcome Back!</h1>
+                                <p class="p-over">To keep connected with us please login with your personal info</p>
+                                <button class="btn-sign-up ghost" id="signIn">Sign In</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+           
+        </div>
+        </div>
+    </div>
+
+
+    <article class="col-md-9 text-center">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                   Quên mật khẩu
+                </h4>
+            </div>
+            <div class="panel-body">
+                <div class="form">
+                    <form action="">
+                        
+                        
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <em class="fa fa-home fa-lg fa-horizon"></em>
+                                        </span>
+                                        <input type="text" maxlength="60" value="" name="fusername" class="form-control" placeholder="Username">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <em class="fa fa-envelope fa-lg fa-horizon"></em>
+                                        </span>
+                                        <input type="email" maxlength="60" value="" name="femail" class="form-control required" placeholder="Email"  data-mess="Vui lòng nhập email khả dụng">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="middle text-center clearfix">
+                                        <div class="nv-recaptcha-default"><div id="recaptchaq5OeOwIw" data-toggle="recaptcha" data-pnum="4" data-btnselector="[type=submit]"><div style="width: 304px; height: 78px;"><div>
+                                            <iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeCch0UAAAAAKrftQUTIjPOxFo5KYJTiFmaH-DJ&amp;co=aHR0cHM6Ly9udWtldmlldC52bjo0NDM.&amp;hl=vi&amp;type=image&amp;v=vpEprwpCoBMgy-fvZET0Mz6L&amp;size=normal&amp;cb=di8mhcyje175" width="304" height="78" role="presentation" name="a-bkuanbusrlrd" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div></div>
+                                    </div>
+                                </div>
+                                <div class="text-center form-group">
+                                    <button type="reset" class="btn btn-default">Nhập lại</button>
+                                    <button type="button" class="btn btn-primary">Gửi</button>
+                                
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+
+                                
+                            </div>
+
+                            
+                        
+                      
+                        
+                        <div class=" ">
+                            <div class="col-sm-12"> 
+                               
+                            </div>
+                            
+                        </div>
+                        
+
+                    </form>
+        
+                </div>
+            </div>
+                   
+        </div>
+        
+
+     
+       
+    
+
+    </article>
+
+    <aside class="col-md-3">
+
+      <div class="panel panel-default mt-4">
+        <div class="panel-body">
+          <form style="flex-direction: inherit; padding: 0;" class="form-inline">
+            <input class="form-control col-sm-9" type="search" placeholder="Search" aria-label="Search">
+            <button style="background: none!important;" class="btn" type="submit"><span
+                class="glyphicon glyphicon-search"></span></button>
+          </form>
+        </div>
+      </div>
+      <div class="panel-group" id="accordion">
+        <div  class="panel panel-default">
+          <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+            <span class="glyphicon glyphicon-th-list"></span> <strong>Danh Mục</strong>
+          </div>
+          <ul id="collapse1" class="list-group panel-collapse collapse in" style="height: 0px;">
+            <li class="list-group-item "><a href="#"> Kiểm thử và triển khai</a><span class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">SQL server</a><span class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">Lập trình PHP</a><span class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">Lập trình Android cơ bản</a><span class="label badge">12</span>
+            </li>
+            <li class="list-group-item "><a href="#">Lập trình Android nâng cao</a><span class="label badge">12</span>
+            </li>
+            <li class="list-group-item "><a href="#">Thiết kế layout</a><span class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">Thiết kế layout trên android</a><span class="label badge">12</span>
+            </li>
+            <li class="list-group-item "><a href="#">Quản lý dự án với angle</a><span class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">Lập trình hướng đối tượng với java</a><span
+                class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">Internet Marketing</a><span class="label badge">12</span></li>
+            <li class="list-group-item "><a href="#">Lập trình ASP.NET</a><span class="label badge">12</span></li>
+          </ul>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+            <span class="glyphicon glyphicon-list-alt"></span> <strong>Tin Tuc</strong>
+          </div>
+          <ul id="collapse2" class="list-group panel-collapse collapse" style="height: 0px;">
+            <li class="list-group-item ">Apple</li>
+            <li class="list-group-item ">Asus</li>
+            <li class="list-group-item ">Vivo</li>
+            <li class="list-group-item ">Lenovo</li>
+            <li class="list-group-item ">MSI</li>
+            <li class="list-group-item ">HP</li>
+          </ul>
+        </div>
+      
+      </div>
+
+    </aside>
+
+  </div>
+  <footer style="padding: 0;" class="panel panel-default container">
+    <div class="panel-heading text-center">
+      <p>FPT Polytechnic &copy; 2017. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <!-- jQuery -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

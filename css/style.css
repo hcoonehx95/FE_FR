@@ -1,0 +1,132 @@
+body {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0 20px;
+  margin: 0 !important;
+}
+
+
+
+
+/* header --------------- */
+
+header.row {
+  position: relative;
+  justify-content: right;
+}
+
+header .shopping_mall {
+  /* float: left; */
+  position: absolute;
+  bottom: 20px;
+  font-variant: small-caps;
+  left: 0;
+}
+
+.shopping_mall>h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
+  color: #fff;
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 2px #000;
+  padding-bottom: 0;
+  border-bottom: 1px dotted gray;
+  margin: 0;
+}
+
+.shopping_mall>h5 {
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+
+.poly-cart {
+  margin-top: 5px;
+}
+
+.poly-cart ul {
+  padding: 0px;
+  margin: 0px;
+  font-variant: small-caps;
+}
+
+.poly-cart .panel-heading strong {
+  font-variant: small-caps;
+  font-size: larger;
+  text-shadow: 0 0 2px darkgray;
+}
+
+.poly-prod {
+  text-align: center;
+  padding: 5px;
+}
+
+.poly-prod .panel-body img {
+  height: 150px;
+  max-width: 95%;
+}
+
+footer .panel-heading {
+	width: 100%;
+}
+
+
+
+/* nav ------------ */
+
+nav.row {
+  background-color: #000;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav .menu ul {
+  display: flex;
+}
+
+.menu ul li {
+  padding: 12px;
+}
+
+.menu ul a {
+  font-size: 14px;
+  color: #fff;
+}
+
+.menu ul li .glyphicon {
+  color: #fff;
+  font-size: 14px;
+}
+
+.menu ul .displayBlock .displayNone {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 5px #000;
+  padding: 10px 0 !important;
+  margin-top: 12px !important;
+}
+
+.menu ul .displayBlock .displayNone li {
+  padding: 1px 32px;
+}
+
+.menu ul .displayBlock .displayNone a {
+  color: #000;
+}
+
+.menu ul .displayBlock:hover .displayNone {
+  display: block;
+  z-index: 5;
+}
+
+aside .panel-body .list-group li {
+  border: 0 !important;
+}

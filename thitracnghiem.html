@@ -4,13 +4,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FPT Polytechnic</title>
+  <title>Câu hỏi</title>
+
+  <!-- <script src="js/main.js"></script> -->
 
   <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/bootstrap-grid.css">
   <!-- Poly -->
   <link href="css/poly.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script src="./js/angular.min.js"></script>
   <script src="./js/myApp.js"></script>
+
+
 
 </head>
 
@@ -21,7 +28,7 @@
       <img width="100%" src="images/banner.png" />
     </header>
     <nav class="row">
-      <div class="navbar navbar-inverse">
+      <div class="navbar navbar-inverse col-md-12">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
@@ -52,7 +59,7 @@
                 <li><a href="./capnhattk.html"><span class="glyphicon glyphicon-edit"></span> Cập nhật hồ sơ</a></li>
                 <li class="divider"></li>
                 <!-- <li><a href="">Đơn hàng</a></li>
-                                <li><a href="">Hàng đã mua</a></li> -->
+                                      <li><a href="">Hàng đã mua</a></li> -->
               </ul>
             </li>
           </ul>
@@ -64,6 +71,7 @@
         </div>
       </div>
     </nav>
+
     <div id="my-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -113,21 +121,7 @@
 
           <div class="modal-body">
             <div class="form-signin " id="form-signin">
-              <!-- <div class="form-container sign-up-container">
-                        <form class="form-sg" action="#">
-                            <h1 class="h1-sign-up">Create Account</h1>
-                            <div class="social-container">
-                                
-                            </div>
-                            <span>or use your email for registration</span>
-                            <input type="text" placeholder="Name" />
-                            <label for=""></label>
-                            <input type="email" placeholder="Email" />
-                            <label for=""></label>
-                            <input type="password" placeholder="Password" />
-                            <button class="btn-sign-up">Sign Up</button>
-                        </form>
-                    </div> -->
+
               <div class="form-container sign-in-container">
                 <form class="form-sg" action="#">
                   <h1 class="h1-sign-up">Sign in</h1>
@@ -144,11 +138,7 @@
               </div>
               <div class="overlay-container">
                 <div class="overlay">
-                  <!-- <div class="overlay-panel overlay-left">
-                                <h1 class="h1-sign-up">Hello, Friend!</h1>
-                                <p  class="p-over">Enter your personal details and start journey with us</p>
-                                <button class="btn-sign-up ghost" id="signUp">Sign Up</button>
-                            </div> -->
+
                   <div class="overlay-panel overlay-right">
                     <h1 class="h1-sign-up">Welcome Back!</h1>
                     <p class="p-over">To keep connected with us please login with your personal info</p>
@@ -166,33 +156,10 @@
     </div>
 
 
-    <rowArticle class="col-md-8 text-center list" ng-controller="subjectCtrl">
-      <div class="col-sm-6 poly-prod item" ng-repeat="sub in list_subject | limitTo:4:begin">
-        <a href="./thitracnghiem.html">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                {{sub.Name}}
-              </h4>
-            </div>
-            <div class="panel-body">
-              <img src="./images/logos/{{sub.Logo}}" alt="">
-            </div>
-          </div>
-        </a>
-      </div>
+    <div class="row">
+      <article class="col-sm-8"></article>
 
-      <!-- phan trang -->
-      <ul class="pager ">
-        <li><a href="#" ng-click="first()"><span class="glyphicon glyphicon-hand-up"></span></a></li>
-        <li><a href="#" ng-click="prev()"><span class="glyphicon glyphicon-hand-left"></span></a></li>
-        <li><a href="#" ng-click="next()"><span class="glyphicon glyphicon-hand-right"></span></a></li>
-        <li><a href="#" ng-click="last()"><span class="glyphicon glyphicon-hand-down"></span></a></li>
-      </ul>
-      <!-- <script src="./js/pagination.js"></script> -->
-    </rowArticle>
-
-    <aside class="col-md-4" ng-controller="subjectCtrl">
+      <aside class="col-md-4" ng-controller="subjectCtrl">
 
       <div class="panel panel-default mt-4">
         <div class="panel-body">
@@ -211,7 +178,7 @@
           </div>
           <ul id="collapse1" class="list-group panel-collapse collapse in" style="height: 0px;">
             <li class="list-group-item " ng-repeat="sub in list_subject">
-              <a href="./thitracnghiem.html">{{sub.Name}}</a>
+              <a href="#">{{sub.Name}}</a>
               <span class="label badge">12</span>
             </li>
           </ul>
@@ -234,19 +201,21 @@
       </div>
 
     </aside>
-
-  </div>
-  <footer style="padding: 0;" class="panel panel-default container">
-    <div class="panel-heading text-center">
-      <p>FPT Polytechnic &copy; 2017. All rights reserved.</p>
     </div>
-  </footer>
 
+
+
+    <footer class="panel panel-default row">
+      <div class="panel-heading text-center col-md-12">
+        <p>FPT Polytechnic &copy; 2017. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
 
   <!-- jQuery -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-
+  <!-- <script src="./js/js.js"></script> -->
 </body>
 
 </html>

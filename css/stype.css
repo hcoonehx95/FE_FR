@@ -73,7 +73,7 @@ button.ghost {
 	border-color: white;
 }
 
-form {
+/* form {
 	background-color: white;
 	display: flex;
 	align-items: center;
@@ -82,7 +82,7 @@ form {
 	padding: 0 50px;
 	height: 100%;
 	text-align: center;
-}
+} */
 
 input {
 	background-color: #eee;
@@ -244,6 +244,7 @@ footer {
 footer p {
     margin: 10px 0;
 }
+
 
 footer i {
     color: red;
