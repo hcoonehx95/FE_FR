@@ -54,11 +54,14 @@ app.directive("article", function (quizFactory) {
     scope: {},
     templateUrl: "./template/qizz-xayDungTrangWeb.html",
     link: function (scope, elem, attrs) {
+
 			// Start
       scope.start = function () {
 				scope.index = 0;
         scope.inProgess = true;
-				scope.quizOver = false
+				scope.quizOver = false;
+        scope.time = 60 * 10;
+        scope.timeOut();
         scope.getQuestion();
       };
 			// Reset
@@ -77,6 +80,12 @@ app.directive("article", function (quizFactory) {
 				} else {
 					scope.quizOver = true;
 				}
+
+        if (scope.a == 0) {
+          quiz = 0;
+          scope.quizOver = true;
+          // console.log("abc");
+        }
       };
 			// checkAnswer
       scope.checkAnswer = function () {
@@ -86,7 +95,6 @@ app.directive("article", function (quizFactory) {
         if (answ == scope.answer) {
           // alert("Chinh xac !");
 					scope.score++;
-					console.log(scope.score);
 					scope.correctAns = alert("Chinh xac !");
         } else {
           scope.correctAns = alert("Sai roi :(( !");
@@ -107,7 +115,24 @@ app.directive("article", function (quizFactory) {
 				}
 				scope.getQuestion();
 			};
+      // thoi gian
+      scope.timeOut = function timefun() {
+        
+        scope.time--;
+        scope.minute = Math.floor(scope.time / 60);
+        scope.second = scope.time % 60;
 
+        document.getElementById("minute").innerHTML = scope.minute;
+        document.getElementById("second").innerHTML = scope.second;
+        if (scope.time > 0) {
+          setTimeout(timefun,1000);
+        } else {
+          scope.a = scope.time;
+          scope.getQuestion();
+        }
+      }
+
+      // scope.reset
       scope.reset();
     },
   };
@@ -120,10 +145,11 @@ app.factory('quizFactory', function($http) {
 	});
 	return {
 		getQuestion:function(index) {
+      var randomItem = questions[Math.floor(Math.random() * questions.length)];
 			var countQ = questions.length;
 			if (countQ > 10) countQ = 10;
 			if (index < 10) {
-				return questions[index];
+				return randomItem;
 			} else {
 				return false;
 			}
