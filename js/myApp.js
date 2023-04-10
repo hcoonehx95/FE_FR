@@ -38,9 +38,9 @@ app.config(function($routeProvider){
 //  controller ______________________________
 
 app.controller("quizCtrl", function ($scope, $http, $routeParams, quizFactory) {
-  // $http.get("../db/Quizs/" + $routeParams.Id + ".js").then(function (reponse) {
-  //   quizFactory.questions = reponse.data;
-  // });
+  $http.get("../db/Quizs/" + $routeParams.Id + ".js").then(function (reponse) {
+      quizFactory.questions = reponse.data;
+    });
 });
 
 
