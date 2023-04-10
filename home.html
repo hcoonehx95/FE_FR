@@ -1,0 +1,68 @@
+<article class="col-md-8 text-center list" ng-controller="subjectCtrl">
+  <div class="col-sm-6 poly-prod item" ng-repeat="sub in list_subject | limitTo:4:begin">
+    <a href="#thitracnghiem/{{sub.Id}}/{{sub.Name}}">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            {{sub.Name}}
+          </h4>
+        </div>
+        <div class="panel-body">
+          <img src="./images/logos/{{sub.Logo}}" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- phan trang -->
+  <ul class="pager ">
+    <li><a href="" ng-click="first()"><span class="glyphicon glyphicon-hand-up"></span></a></li>
+    <li><a href="" ng-click="prev()"><span class="glyphicon glyphicon-hand-left"></span></a></li>
+    <li><a href="" ng-click="next()"><span class="glyphicon glyphicon-hand-right"></span></a></li>
+    <li><a href="" ng-click="last()"><span class="glyphicon glyphicon-hand-down"></span></a></li>
+  </ul>
+  <!-- <script src="./js/pagination.js"></script> -->
+</article>
+
+<aside class="col-md-4" ng-controller="subjectCtrl">
+
+  <div class="panel panel-default mt-4">
+    <div class="panel-body">
+      <form style="flex-direction: inherit; padding: 0;" class="form-inline">
+        <input class="form-control col-sm-9" type="search" placeholder="Search" aria-label="Search">
+        <button style="background: none!important;" class="btn" type="submit"><span
+            class="glyphicon glyphicon-search"></span></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        <span class="glyphicon glyphicon-th-list"></span> <strong>Danh Mục</strong>
+      </div>
+      <ul id="collapse1" class="list-group panel-collapse collapse in" style="height: 0px;">
+        <li class="list-group-item " ng-repeat="sub in list_subject">
+          <a href="#thitracnghiem/{{sub.Id}}/{{sub.Name}}">{{sub.Name}}</a>
+          <span class="label badge">12</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <span class="glyphicon glyphicon-list-alt"></span> <strong>Tin Tuc</strong>
+      </div>
+      <ul id="collapse2" class="list-group panel-collapse collapse" style="height: 0px;">
+        <li class="list-group-item ">Apple</li>
+        <li class="list-group-item ">Asus</li>
+        <li class="list-group-item ">Vivo</li>
+        <li class="list-group-item ">Lenovo</li>
+        <li class="list-group-item ">MSI</li>
+        <li class="list-group-item ">HP</li>
+      </ul>
+    </div>
+
+  </div>
+
+</aside>
