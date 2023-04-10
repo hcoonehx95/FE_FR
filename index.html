@@ -11,6 +11,7 @@
   <link href="css/poly.css" rel="stylesheet" />
   <script src="./js/angular.min.js"></script>
   <script src="./js/myApp.js"></script>
+  <script src="./js/angular-route.js"></script>
 
 </head>
 
@@ -32,24 +33,24 @@
         <div class="navbar-collapse collapse">
           <!--Menu-->
           <ul class="nav navbar-nav">
-            <li><a class="navbar-brand" href="./index.html">FPT Polytechnic</a></li>
-            <li><a href="./index.html"><span class="glyphicon glyphicon-home"></span> Trang chủ</a></li>
-            <li><a href="./gioithieu.html"><span class="glyphicon glyphicon-th-list"></span> Giới thiệu</a></li>
-            <li><a href="./lienhe.html"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
-            <li><a href="./gopy.html"><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
+            <li><a class="navbar-brand" href="#/!">FPT Polytechnic</a></li>
+            <li><a href="#/!"><span class="glyphicon glyphicon-home"></span> Trang chủ</a></li>
+            <li><a href="#gioithieu"><span class="glyphicon glyphicon-th-list"></span> Giới thiệu</a></li>
+            <li><a href="#lienhe"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
+            <li><a href="#gopy"><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
             <li><a href=""><span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
                 Tài khoản <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="" data-toggle="modal" data-target="#exampleModal">Đăng nhập</a></li>
-                <li><a href="./quenmk.html">Quên mật khẩu</a></li>
+                <li><a href="#quenmk">Quên mật khẩu</a></li>
                 <li><a href="" data-toggle="modal" data-target="#my-modal"> <span
                       class="glyphicon glyphicon-plus-sign"></span> Đăng ký thành viên</a></li>
                 <li class="divider"></li>
                 <li><a href=""><span class="glyphicon glyphicon-off"></span> Đăng xuất</a></li>
                 <li><a href=""><span class="glyphicon glyphicon-edit"></span> Đổi mật khẩu</a></li>
-                <li><a href="./capnhattk.html"><span class="glyphicon glyphicon-edit"></span> Cập nhật hồ sơ</a></li>
+                <li><a href="#capnhattk"><span class="glyphicon glyphicon-edit"></span> Cập nhật hồ sơ</a></li>
                 <li class="divider"></li>
                 <!-- <li><a href="">Đơn hàng</a></li>
                                 <li><a href="">Hàng đã mua</a></li> -->
@@ -165,75 +166,8 @@
       </div>
     </div>
 
-
-    <rowArticle class="col-md-8 text-center list" ng-controller="subjectCtrl">
-      <div class="col-sm-6 poly-prod item" ng-repeat="sub in list_subject | limitTo:4:begin">
-        <a href="./thitracnghiem.html">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                {{sub.Name}}
-              </h4>
-            </div>
-            <div class="panel-body">
-              <img src="./images/logos/{{sub.Logo}}" alt="">
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- phan trang -->
-      <ul class="pager ">
-        <li><a href="#" ng-click="first()"><span class="glyphicon glyphicon-hand-up"></span></a></li>
-        <li><a href="#" ng-click="prev()"><span class="glyphicon glyphicon-hand-left"></span></a></li>
-        <li><a href="#" ng-click="next()"><span class="glyphicon glyphicon-hand-right"></span></a></li>
-        <li><a href="#" ng-click="last()"><span class="glyphicon glyphicon-hand-down"></span></a></li>
-      </ul>
-      <!-- <script src="./js/pagination.js"></script> -->
-    </rowArticle>
-
-    <aside class="col-md-4" ng-controller="subjectCtrl">
-
-      <div class="panel panel-default mt-4">
-        <div class="panel-body">
-          <form style="flex-direction: inherit; padding: 0;" class="form-inline">
-            <input class="form-control col-sm-9" type="search" placeholder="Search" aria-label="Search">
-            <button style="background: none!important;" class="btn" type="submit"><span
-                class="glyphicon glyphicon-search"></span></button>
-          </form>
-        </div>
-      </div>
-
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-            <span class="glyphicon glyphicon-th-list"></span> <strong>Danh Mục</strong>
-          </div>
-          <ul id="collapse1" class="list-group panel-collapse collapse in" style="height: 0px;">
-            <li class="list-group-item " ng-repeat="sub in list_subject">
-              <a href="./thitracnghiem.html">{{sub.Name}}</a>
-              <span class="label badge">12</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-            <span class="glyphicon glyphicon-list-alt"></span> <strong>Tin Tuc</strong>
-          </div>
-          <ul id="collapse2" class="list-group panel-collapse collapse" style="height: 0px;">
-            <li class="list-group-item ">Apple</li>
-            <li class="list-group-item ">Asus</li>
-            <li class="list-group-item ">Vivo</li>
-            <li class="list-group-item ">Lenovo</li>
-            <li class="list-group-item ">MSI</li>
-            <li class="list-group-item ">HP</li>
-          </ul>
-        </div>
-
-      </div>
-
-    </aside>
+    <!-- ngRoute ng-view ____________________ -->
+    <div ng-view></div>
 
   </div>
   <footer style="padding: 0;" class="panel panel-default container">

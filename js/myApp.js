@@ -1,4 +1,48 @@
-var app = angular.module("myApp", []);
+var app = angular.module("myApp", ['ngRoute']);
+
+// Route _________________________________
+
+app.config(function($routeProvider){
+  $routeProvider
+  .when('/',{
+    templateUrl : './home.html'
+  })
+  .when('/thitracnghiem/:id/:name',{
+    templateUrl : './thitracnghiem.html',
+    controller : 'quizCtrl'
+  })
+  .when('/gioithieu',{
+    templateUrl : './gioithieu.html'
+  })
+  .when('/gopy',{
+    templateUrl : './gopy.html'
+  })
+  .when('/lienhe',{
+    templateUrl : './lienhe.html'
+  })
+  .when('/capnhattk',{
+    templateUrl : './capnhattk.html'
+  })
+  .when('/quenmk',{
+    templateUrl : './quenmk.html'
+  })
+  .otherwise( {
+    redirectTo: "/"
+  })
+});
+
+
+
+
+
+//  controller ______________________________
+
+app.controller("quizCtrl", function ($scope, $http, $routeParams, quizFactory) {
+  // $http.get("../db/Quizs/" + $routeParams.Id + ".js").then(function (reponse) {
+  //   quizFactory.questions = reponse.data;
+  // });
+});
+
 
 //  controller ______________________________
 
@@ -48,7 +92,7 @@ app.controller("subjectCtrl", function ($scope, $http) {
 
 //  directive______________________________
 
-app.directive("article", function (quizFactory) {
+app.directive("rowArticle", function (quizFactory) {
   return {
     restrict: "AE",
     scope: {},
@@ -139,9 +183,10 @@ app.directive("article", function (quizFactory) {
 });
 
 // factory ______________________________
-app.factory('quizFactory', function($http) {
-	$http.get('../db/Quizs/ADAV.js').then(function(response) {
-		questions = response.data;
+app.factory('quizFactory', function($http, $routeParams) {
+	$http.get("../db/Quizs/" + $routeParams.id + ".js").then(function (reponse) {
+    questions = reponse.data;
+    console.log(questions);
 	});
 	return {
 		getQuestion:function(index) {
