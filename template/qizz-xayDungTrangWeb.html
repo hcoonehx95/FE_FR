@@ -1,6 +1,9 @@
-<div class="start_qizz row" ng-show="!inProgess">
+<div class="start_qizz row" ng-show="!inProgess" ng-controller="subjectCtrl">
+  <div class="row">
+    <h1>Giới thiệu môn học</h1>
+  </div>
   <div class="col text-center">
-    <h3>Start qizz poly (Lập trình Android nâng cao).</h3>
+    <h3>Start qizz poly {{Name}}.</h3>
     <div class="btn btn-primary" ng-click="start()">Start</div>
   </div>
 </div>
@@ -18,7 +21,11 @@
   <div ng-show="!quizOver">
     <div class="row countdown_time">
       <div class="col text-center">
-        <h2 style="color: #2473ff;"><span class="glyphicon glyphicon-time" style="top: 3px;"></span> 10:00</h2>
+        <h2 style="color: #2473ff;">
+          <span class="glyphicon glyphicon-time" style="top: 3px;"></span> 
+          <span id="minute"></span> : 
+          <span id="second"></span>
+        </h2>
       </div>
     </div>
     <!--    lien he -->
@@ -26,7 +33,7 @@
       <div class="panel-heading d-flex justify-content-between">
         <div>
           <img src="./images/logos/WEBU.jpg" width="25" alt="">
-          <span> Xây dựng trang Web</span>
+          <span>{{}}</span>
         </div>
         <span>{{index+1}}/10</span>
       </div>
@@ -47,7 +54,7 @@
 
         <button ng-show="answerMode" ng-click="checkAnswer()" class="btn btn-primary">Submit</button>
         <ul class="pager m-1 float-right">
-          <!-- <li><button ng-click="prevQuestion()"><span class="glyphicon glyphicon-hand-left"></span></button></li> -->
+          <li><button ng-click="prevQuestion()"><span class="glyphicon glyphicon-hand-left"></span></button></li>
           <li><button ng-show="!answerMode" ng-click="nextQuestion()"><span
                 class="glyphicon glyphicon-hand-right"></span></button></li>
         </ul>

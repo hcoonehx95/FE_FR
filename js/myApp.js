@@ -1,4 +1,57 @@
-var app = angular.module("myApp", []);
+var app = angular.module("myApp", ['ngRoute']);
+
+// Route _________________________________
+
+app.config(function($routeProvider){
+  $routeProvider
+  .when('/',{
+    templateUrl : './home.html'
+  })
+  .when('/thitracnghiem/:id/:name',{
+    templateUrl : './thitracnghiem.html',
+    controller : 'quizCtrl'
+  })
+  .when('/gioithieu',{
+    templateUrl : './gioithieu.html'
+  })
+  .when('/gopy',{
+    templateUrl : './gopy.html'
+  })
+  .when('/lienhe',{
+    templateUrl : './lienhe.html'
+  })
+  .when('/capnhattk',{
+    templateUrl : './capnhattk.html'
+  })
+  .when('/quenmk',{
+    templateUrl : './quenmk.html'
+  })
+  .otherwise( {
+    redirectTo: "/"
+  })
+  .when('/dangki',{
+    templateUrl : './dangki.html'
+  })
+  .when('/dangnhap',{
+    templateUrl : './dangnhap.html'
+  })
+  .when('/thongtintaikhoan',{
+    templateUrl : './thongtintaikhoan.html'
+  })
+});
+
+
+
+
+
+//  controller ______________________________
+
+app.controller("quizCtrl", function ($scope, $http, $routeParams, quizFactory) {
+  $http.get("../db/Quizs/" + $routeParams.Id + ".js").then(function (reponse) {
+      quizFactory.questions = reponse.data;
+    });
+});
+
 
 //  controller ______________________________
 
@@ -48,17 +101,20 @@ app.controller("subjectCtrl", function ($scope, $http) {
 
 //  directive______________________________
 
-app.directive("article", function (quizFactory) {
+app.directive("rowArticle", function (quizFactory) {
   return {
     restrict: "AE",
     scope: {},
     templateUrl: "./template/qizz-xayDungTrangWeb.html",
     link: function (scope, elem, attrs) {
+
 			// Start
       scope.start = function () {
 				scope.index = 0;
         scope.inProgess = true;
-				scope.quizOver = false
+				scope.quizOver = false;
+        scope.time = 60 * 10;
+        scope.timeOut();
         scope.getQuestion();
       };
 			// Reset
@@ -77,6 +133,12 @@ app.directive("article", function (quizFactory) {
 				} else {
 					scope.quizOver = true;
 				}
+
+        if (scope.a == 0) {
+          quiz = 0;
+          scope.quizOver = true;
+          // console.log("abc");
+        }
       };
 			// checkAnswer
       scope.checkAnswer = function () {
@@ -86,7 +148,6 @@ app.directive("article", function (quizFactory) {
         if (answ == scope.answer) {
           // alert("Chinh xac !");
 					scope.score++;
-					console.log(scope.score);
 					scope.correctAns = alert("Chinh xac !");
         } else {
           scope.correctAns = alert("Sai roi :(( !");
@@ -107,23 +168,42 @@ app.directive("article", function (quizFactory) {
 				}
 				scope.getQuestion();
 			};
+      // thoi gian
+      scope.timeOut = function timefun() {
+        
+        scope.time--;
+        scope.minute = Math.floor(scope.time / 60);
+        scope.second = scope.time % 60;
 
+        document.getElementById("minute").innerHTML = scope.minute;
+        document.getElementById("second").innerHTML = scope.second;
+        if (scope.time > 0) {
+          setTimeout(timefun,1000);
+        } else {
+          scope.a = scope.time;
+          scope.getQuestion();
+        }
+      }
+
+      // scope.reset
       scope.reset();
     },
   };
 });
 
 // factory ______________________________
-app.factory('quizFactory', function($http) {
-	$http.get('../db/Quizs/ADAV.js').then(function(response) {
-		questions = response.data;
+app.factory('quizFactory', function($http, $routeParams) {
+	$http.get("../db/Quizs/" + $routeParams.id + ".js").then(function (reponse) {
+    questions = reponse.data;
+    // console.log(questions);
 	});
 	return {
 		getQuestion:function(index) {
+      var randomItem = questions[Math.floor(Math.random() * questions.length)];
 			var countQ = questions.length;
 			if (countQ > 10) countQ = 10;
 			if (index < 10) {
-				return questions[index];
+				return randomItem;
 			} else {
 				return false;
 			}
