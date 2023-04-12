@@ -83,8 +83,9 @@
 
 </article>
 
-<aside class="col-md-3">
+<aside class="col-md-3" ng-controller="subjectCtrl">
 
+  
   <div class="panel panel-default mt-4">
     <div class="panel-body">
       <form style="flex-direction: inherit; padding: 0;" class="form-inline">
@@ -94,29 +95,20 @@
       </form>
     </div>
   </div>
+
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
       <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
         <span class="glyphicon glyphicon-th-list"></span> <strong>Danh Mục</strong>
       </div>
       <ul id="collapse1" class="list-group panel-collapse collapse in" style="height: 0px;">
-        <li class="list-group-item "><a href="#"> Kiểm thử và triển khai</a><span class="label badge">12</span></li>
-        <li class="list-group-item "><a href="#">SQL server</a><span class="label badge">12</span></li>
-        <li class="list-group-item "><a href="#">Lập trình PHP</a><span class="label badge">12</span></li>
-        <li class="list-group-item "><a href="#">Lập trình Android cơ bản</a><span class="label badge">12</span>
+        <li class="list-group-item " ng-repeat="sub in list_subject">
+          <a href="#thitracnghiem/{{sub.Id}}/{{sub.Name}}">{{sub.Name}}</a>
+          <span class="label badge">12</span>
         </li>
-        <li class="list-group-item "><a href="#">Lập trình Android nâng cao</a><span class="label badge">12</span>
-        </li>
-        <li class="list-group-item "><a href="#">Thiết kế layout</a><span class="label badge">12</span></li>
-        <li class="list-group-item "><a href="#">Thiết kế layout trên android</a><span class="label badge">12</span>
-        </li>
-        <li class="list-group-item "><a href="#">Quản lý dự án với angle</a><span class="label badge">12</span></li>
-        <li class="list-group-item "><a href="#">Lập trình hướng đối tượng với java</a><span
-            class="label badge">12</span></li>
-        <li class="list-group-item "><a href="#">Internet Marketing</a><span class="label badge">12</span></li>
-        <li class="list-group-item "><a href="#">Lập trình ASP.NET</a><span class="label badge">12</span></li>
       </ul>
     </div>
+
     <div class="panel panel-default">
       <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
         <span class="glyphicon glyphicon-list-alt"></span> <strong>Tin Tuc</strong>
@@ -134,3 +126,4 @@
   </div>
 
 </aside>
+
