@@ -52,7 +52,7 @@ app.controller("quizCtrl", function ($scope, $http, $routeParams, quizFactory) {
     });
 });
 
-
+app.controller("")
 //  controller ______________________________
 
 app.controller("subjectCtrl", function ($scope, $http) {
