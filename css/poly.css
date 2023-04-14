@@ -90,7 +90,7 @@ header {
 }
 
 /* list-item */
-article .item { 
+article .item {
 	z-index: 10;
 }
 
@@ -318,4 +318,22 @@ input {
 
 .box-login {
 	margin: 10px auto;
+}
+
+
+
+
+
+
+
+.text-warning {
+	font-weight: bold;
+}
+
+.textBlue {
+	display: inline-block;
+	padding: 11px 12px 11px 32px;
+	font-size: 16px;
+	background: url(../images/bg-title.png) no-repeat;
+	border: 1.5px solid #fdcb45;
 }
