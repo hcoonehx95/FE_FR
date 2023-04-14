@@ -1,38 +1,60 @@
-<div class="start_qizz row" ng-show="!inProgess" ng-controller="subjectCtrl">
-  <div class="col text-center">
-    <h3>Start qizz poly {{Name}}.</h3>
-    <div class="btn btn-primary" ng-click="start()">Start</div>
+
+<div class="start_qizz row" ng-show="!inProgess">
+  <div class="container mb-3 table-bordered">
+    <div class="aioCourseDesc">
+      <h3 class="textBlue">{{NameQ}}.</h3>
+      <div class="wrapContent" style="background-image: url(../images/thitracnghiem.png);">
+        <div>
+          <div>
+            <p><span class="text-warning">- Thời gian học tập với khóa học:</span> Ngay khi bạn đăng ký thành
+              công khóa học đến khi hết hạn khóa học (31/05/2023)</p>
+            <p><span class="text-warning">- Thời gian học:</span> Học bất cứ thời gian nào</p>
+            <p><span class="text-warning">- Hình thức học:</span> Học trực tuyến thông qua máy tính, điện thoại,
+              máy tính bảng có kết nối internet</p>
+          </div>
+          <img src="">
+        </div>
+      </div>
+    </div>
+    <div class="text-center" style="margin: 23px 0;">
+      <div class="btn btn-primary" ng-click="start()">Start qizz poly</div>
+    </div>
   </div>
 </div>
 
 
 <div ng-show="inProgess">
-
+  <!-- Kết quả start -->
   <div class="start_qizz row" ng-show="quizOver">
     <div class="col text-center">
-      <h3>Over qizz poly : <span>diem cua ban la ({{score}}d)</span></h3>
-      <div class="btn btn-primary" ng-click="reset()">play again quiz</div>
+      <h3>Kết thúc bài làm môn : {{NameQ}}</span></h3>
+      <h3>Điểm của bạn là ({{score}}đ) - <span ng-if="score < 5">Rớt</span><span ng-if="score > 5">Đậu</span> </h3>
+      <div>
+        <div class="btn btn-primary" ng-click="reset()">Làm lại</div>
+        <div class="btn btn-primary">Lưu kết quả</div>
+      </div>
     </div>
   </div>
+  <!-- Kết quả end -->
 
   <div ng-show="!quizOver">
     <div class="row countdown_time">
       <div class="col text-center">
         <h2 style="color: #2473ff;">
-          <span class="glyphicon glyphicon-time" style="top: 3px;"></span> 
-          <span id="minute"></span> : 
+          <span class="glyphicon glyphicon-time" style="top: 3px;"></span>
+          <span id="minute"></span> :
           <span id="second"></span>
         </h2>
       </div>
     </div>
     <!--    lien he -->
     <div class="panel panel-default">
-      <div class="panel-heading d-flex justify-content-between">
+      <div class="panel-heading justify-content-between">
         <div>
           <img src="./images/logos/WEBU.jpg" width="25" alt="">
-          <span>{{}}</span>
+          <span>{{NameQ}}</span>
+          <span class="panel" style="float: right;">{{index+1}}/10</span>
         </div>
-        <span>{{index+1}}/10</span>
       </div>
       <div class="panel-body">
         <label class="form-check-label"> {{index+1}}. {{question}} </label>
@@ -58,6 +80,7 @@
         <span ng-show="correctAns"></span>
         <span ng-show="!correctAns"></span>
       </div>
+      <span ng-show="paginations()"></span>
     </div>
   </div>
 </div>
