@@ -173,7 +173,7 @@ input {
 		0 10px 10px rgba(0, 0, 0, 0.22);
 	position: relative;
 	overflow: hidden;
-	
+
 	max-width: 100%;
 	min-height: 480px;
 }
@@ -197,7 +197,7 @@ input {
 
 .sign-up-container {
 	left: 0;
-	
+
 	opacity: 0;
 	z-index: 1;
 }
@@ -330,4 +330,27 @@ input {
 
 .box-login {
 	margin: 10px auto;
+}
+
+.subject_infor .text-left {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.subject_infor .text-left .labelName {
+	width: 75%;
+}
+
+.img_avt .box_img {
+	width: 70%;
+	margin: auto;
+	height: 93%;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.img_avt .box_img img {
+	width: 100%;
+	height: 100%;
 }

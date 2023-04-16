@@ -1,3 +1,4 @@
+
 <div class="start_qizz row" ng-show="!inProgess">
   <div class="container mb-3 table-bordered">
     <div class="aioCourseDesc">
@@ -45,16 +46,16 @@
           <tbody>
             <tr>
               <td>1</td>
-              <td>{{answ = 0}}</td>
-              <td>{{question}}</td>
               <td>{{answer}}</td>
+              <td>{{answ}}</td>
+              <td>1</td>
               <td>
-                <span ng-if="1 == answ">1</span>
-                <span ng-if="1 != answ">0</span>
+                <span ng-if="answer == answ">1</span>
+                <span ng-if="answer != answ">0</span>
               </td>
               <td>
-                <span ng-if="1 == answ">Đúng</span>
-                <span ng-if="1 != answ">Sai</span>
+                <span ng-if="answer == answ">Đúng</span>
+                <span ng-if="answer != answ">Sai</span>
               </td>
             </tr>
           </tbody>
@@ -78,7 +79,7 @@
         </h2>
       </div>
     </div>
-    <!--    lien he -->
+
     <div class="panel panel-default">
       <div class="panel-heading justify-content-between">
         <div>
@@ -87,7 +88,7 @@
           <span class="panel" style="float: right;">{{index+1}}/10</span>
         </div>
       </div>
-      <div class="panel-body">6
+      <div class="panel-body">
         <label class="form-check-label"> {{index+1}}. {{question}} </label>
         <hr>
         <form action="">
