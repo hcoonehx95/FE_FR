@@ -1,21 +1,23 @@
 
   
   <article class="col-md-12 text-center">
-    <div class="form-signin " id="form-signin">
+    <div class="form-signin " ng-controller="register" id="form-signin">
               
       <div name="form" class="form-container sign-in-container">
-        <form class="form-sg" action="#">
+        <form name="form" class="form-sg">
           <h1 class="h1-sign-up">Đăng Nhập</h1>
           <div class="social-container">
             <span>Dùng email</span>
           </div>
           <span>Hoặc dùng tài khoản của bạn</span>
-          <input class="col-md-6" type="email" placeholder="Username" />
-          
+          <input class="col-md-6" ng-model="username" name="username" type="text" placeholder="Username" />
+          <span ng-show="form.username.$invalid">Vui lòng nhập tên đăng nhập.</span>
           <label for=""></label>
-          <input class="col-md-6" type="password" placeholder="Password" />
+          <input class="col-md-6"  ng-model="password" name="password" type="password" placeholder="Password" />
+          <span ng-show="form.password.$invalid">Vui lòng nhập password.</span>
           <a href="#">Quên mật khẩu?</a>
-          <button class="btn-sign-up">Đăng nhập</button>
+          <br>
+          <button ng-click="login()" class="btn-sign-up">Đăng nhập</button>
         </form>
       </div>
       

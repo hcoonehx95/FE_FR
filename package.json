@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "json:server": "json-server --watch Students.json"
+    "json:server": "json-server --watch Students.json",
+    "json:server": "json-server --watch login.json"
+    
   },
   "author": "",
   "license": "ISC",

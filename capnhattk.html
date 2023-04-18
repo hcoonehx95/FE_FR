@@ -17,103 +17,37 @@
                                         class="form-control required" placeholder="Họ và tên"
                                         data-mess="Vui lòng nhập chính xác họ và tên">
 
-                                </div>
-                            </div>
 
-                        </div>
-                        <div class="col-sm-6 ">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <em class="fa fa-phone fa-lg fa-horizon"></em>
-                                    </span>
-                                    <input type="text" maxlength="60" value="" name="fphone" class="form-control"
-                                        placeholder="Điện thoại">
-                                </div>
+    <article class="col-md-9 text-center">
+        <div class="form-signin " id="form-signin" ng-controller="register">
 
-                            </div>
-
-
-                        </div>
-                        <div class="">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <em class="fa fa-home fa-lg fa-horizon"></em>
-                                        </span>
-                                        <input type="text" maxlength="60" value="" name="faddress" class="form-control"
-                                            placeholder="Địa chỉ">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <em class="fa fa-envelope fa-lg fa-horizon"></em>
-                                        </span>
-                                        <input type="email" maxlength="60" value="" name="femail"
-                                            class="form-control required" placeholder="Email"
-                                            data-mess="Vui lòng nhập email khả dụng">
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                        <div class="">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </span>
-                                        <input type="text" maxlength="60" value="" name="fb" class="form-control"
-                                            placeholder="Công Việc ">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="bi bi-building"></i>
-                                        </span>
-                                        <input type="text" maxlength="100" value="" name="compani"
-                                            class="form-control required" placeholder="Công ty"
-                                            data-mess="Vui lòng nhập email khả dụng">
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                        <div class=" ">
-                            <div class="col-sm-12">
-                                <div class="form-group ">
-
-                                    <div>
-                                        <textarea cols="8" name="fcon" class="form-control required" maxlength="1000"
-                                            placeholder="Nội dung giới thiệu"
-                                            data-mess="Vui lòng nhập nội dung"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="text-center form-group">
-                            <button type="reset" class="btn btn-default">Nhập lại</button>
-                            <button type="button" class="btn btn-primary">Gửi</button>
-
-                        </div>
-
+            <div class="form-container sign-in-container">
+                <form name="form" class="form-sg" action="#">
+                    <h1 class="h1-sign-up">Cập nhât thông tin</h1>
+                    
+                    <input class="col-md-6" name="fullname" ng-model="fullname" type="text" placeholder="Họ và tên" />
+                    <span ng-show="form.fullname.$invalid">Vui lòng nhập tên.</span>
+                    <label for=""></label>
+                    <input class="col-md-6" name="email" ng-model="email" type="email" placeholder="Email" />
+                    <span ng-show="form.email.$invalid">Vui lòng nhập email.</span>
+                    
+                    <label for=""></label>
+                    <input class="col-md-6" name="birthday" ng-model="birthday" type="date" placeholder="Ngày sinh" />
+                    <span ng-show="form.birthday.$invalid">Vui lòng nhập ngày sinh.</span>
+                    <div  >
+                      <p >
+                        <label for="">Giới tính
+                        <input ng-model="gender" type="radio" class="form-check-input" name="gender" checked value="Nam"> Nam
+                        <input ng-model="gender" type="radio" class="form-check-input" name="gender"  value="Nữ"> Nữ
+                      </label>
+                      </p>
+                    </div>
+                    <br>
+                    <button type="button" ng-click="updatedata()" class="btn-sign-up">Cập nhật</button>
                 </form>
-
+        
             </div>
+           
         </div>
 
     </div>
