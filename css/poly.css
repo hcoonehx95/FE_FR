@@ -358,3 +358,7 @@ input {
 .tableQuestion .table.table-striped td {
 	text-align: left;
 }
+.info_acc {
+	width: 100px;
+	line-height: 35px;
+}

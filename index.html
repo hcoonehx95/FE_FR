@@ -44,18 +44,30 @@
               <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
                 Tài khoản <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#dangnhap" data-toggle="modal" data-target="#exampleModal">Đăng nhập</a></li>
-                <li><a href="#quenmk">Quên mật khẩu</a></li>
-                <li><a href="#dangki" data-toggle="modal" data-target="#my-modal"> <span
+                <li ng-show="formHidden"><a href="#dangnhap" data-toggle="modal" data-target="#exampleModal"><span
+                      class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+                <li ng-show="!formHidden"><a href="#thongtintk"><span class="glyphicon glyphicon-info-sign"></span>
+                    Thông
+                    tin tài khoản</a></li>
+                <!--  -->
+                <li ng-show="formHidden" class="divider"></li>
+                <!--  -->
+                <li ng-show="formHidden"><a href="#dangki" data-toggle="modal" data-target="#my-modal"> <span
                       class="glyphicon glyphicon-plus-sign"></span> Đăng ký thành viên</a></li>
-                <li class="divider"></li>
-                <li><a ng-click="logout()" href=""><span class="glyphicon glyphicon-off"></span> Đăng xuất</a></li>
-                <li><a href=""><span class="glyphicon glyphicon-edit"></span> Đổi mật khẩu</a></li>
-                <li><a href="#capnhattk"><span class="glyphicon glyphicon-edit"></span> Cập nhật hồ sơ</a></li>
-                <li class="divider"></li>
-                <li><a href="#thongtintk"><span class="glyphicon glyphicon-info-sign"></span> Thông tin tài khoản</a></li>
-                <!-- <li><a href="">Đơn hàng</a></li>
-                <li><a href="">Hàng đã mua</a></li> -->
+                <li ng-show="!formHidden"><a href=""><span class="glyphicon glyphicon-edit"></span> Đổi mật khẩu</a></li>
+                <!--  -->
+                <li ng-show="formHidden" class="divider"></li>
+                <!--  -->
+                <li ng-show="formHidden"><a href="#quenmk"><span class="glyphicon glyphicon-question-sign"></span> Quên
+                    mật khẩu</a></li>
+                <li ng-show="!formHidden"><a href="#capnhattk"><span class="glyphicon glyphicon-edit"></span> Cập nhật hồ
+                    sơ</a></li>
+                <!--  -->
+                <li ng-show="!formHidden" class="divider"></li>
+                <!--  -->
+                <li ng-show="!formHidden"><a ng-click="logout()" href=""><span class="glyphicon glyphicon-off"></span>
+                    Đăng xuất</a></li>
+
               </ul>
             </li>
           </ul>

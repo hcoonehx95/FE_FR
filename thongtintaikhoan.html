@@ -1,6 +1,6 @@
 <div class="">
 
-  <article class="col-md-8 text-center">
+  <article class="col-md-8 text-center" ng-controller="register">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -9,11 +9,11 @@
       </div>
       <div class="panel-body text-left row" style="display:flex">
         <div class="form col-md-7">
-          <label for="">Họ Tên</label>: <strong>Name</strong> <br>
-          <label for="">Email</label>: <strong>Name</strong> <br>
-          <label for="">Giới tính</label>: <strong>Name</strong> <br>
-          <label for="">Ngày sinh</label>: <strong>Name</strong> <br>
-          <label for="">Học phí</label>: <strong>Name</strong>
+          <label class="info_acc">Họ Tên :</label> <strong>{{student.datalogin[0].fullname}}</strong> <br>
+          <label class="info_acc">Email :</label> <strong>{{student.datalogin[0].email}}</strong> <br>
+          <label class="info_acc">Giới tính :</label> <strong>{{student.datalogin[0].gender}}</strong> <br>
+          <label class="info_acc">Ngày sinh :</label> <strong>{{student.datalogin[0].birthday}}</strong> <br>
+          <label class="info_acc">Học phí :</label> <strong>0</strong>
         </div>
         <div class="img_avt col-md-5">
           <div class="box_img">

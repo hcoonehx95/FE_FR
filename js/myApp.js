@@ -47,10 +47,12 @@ app.config(function ($routeProvider) {
 // register
 app.controller("register", function ($scope, $http) {
   $scope.student = [];
-  $http.get("./Students.json").then(function (reponse) {
+  $scope.formHidden = true;
+  // $http.get("./Students.json").then(function (reponse) {
+  $http.get("../db/Students.json").then(function (reponse) {
     $scope.student = reponse.data;
+    console.log($scope.student.datalogin);
    
-    console.log($scope.student.students)
     // register
     $scope.postdata = function (even) {
       var data = {
@@ -72,6 +74,7 @@ app.controller("register", function ($scope, $http) {
         }, function (error) {
           alert("Đăng kí thất bại");
         })
+
       } else {
         
         alert("Đăng kí thất bại")
@@ -81,14 +84,13 @@ app.controller("register", function ($scope, $http) {
     // login
     $scope.login = function (even) {
       username = $scope.username;
-
       password = $scope.password;
+      
 
       for (let index = 0; index < $scope.student.students.length; index++) {
-
         if (username == $scope.student.students[index].username && password == $scope.student.students[index].password) {
           $scope.iduser = $scope.student.students[index].id;
-          console.log("oke :", $scope.iduser);
+          // console.log("oke :", $scope.iduser);
           var datas = {
             id: $scope.student.students[index].id,
             username: $scope.student.students[index].username,
@@ -99,13 +101,14 @@ app.controller("register", function ($scope, $http) {
             birthday: $scope.student.students[index].birthday,
             schoolfee: $scope.student.students[index].schoolfee,
             marks: $scope.student.students[index].marks,
-
           }
           $http.post("http://localhost:3000/datalogin", datas)
             .then(function (res) {
               alert("Đăng nhập thành công");
+              window.location = 'http://127.0.0.1:5502/#/';
             }, function (error) {
               alert("Đăng nhập thất bại");
+              console.log("hello");
             })
           break;
         } else {
@@ -131,6 +134,7 @@ app.controller("register", function ($scope, $http) {
           $http.delete("http://localhost:3000/datalogin/" + $scope.logout[0].id + "")
             .then(function (res) {
               alert("Đăng xuất thành công");
+              $scope.formHidden = false;
             }, function (error) {
               alert("Đăng xuất thất bại");
             })
