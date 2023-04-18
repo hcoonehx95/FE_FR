@@ -1,0 +1,15 @@
+{
+  "datalogin": [
+    {
+      "id": 2,
+      "username": "pheonv",
+      "password": "iloveyou",
+      "fullname": "Nguyễn Văn Chí Phèo",
+      "email": "pheonv@fpt.edu.vn",
+      "gender": "true",
+      "birthday": "1985-10-11",
+      "schoolfee": "2500000",
+      "marks": "0"
+    }
+  ]
+}

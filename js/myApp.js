@@ -38,32 +38,139 @@ app.config(function ($routeProvider) {
     .when('/thongtintaikhoan', {
       templateUrl: './thongtintaikhoan.html'
     })
+    .when('/capnhattk', {
+      templateUrl: './capnhattk.html'
+    })
 });
 
 //  controller ______________________________
-
+// register
 app.controller("register", function ($scope, $http) {
-  $scope.postdata = function (even) {
-    var data = {
-      id: Math.random(),
-      username: $scope.username,
-      password: $scope.password,
-      fullname: $scope.fullname,
-      email: $scope.email,
-      gender: $scope.gender,
-      birthday: $scope.birthday,
-      schoolfee: "0",
-      marks:"0",
+  $scope.student = [];
+  $http.get("./Students.json").then(function (reponse) {
+    $scope.student = reponse.data;
+   
+    console.log($scope.student.students)
+    // register
+    $scope.postdata = function (even) {
+      var data = {
+        id: $scope.student.students.length + 1,
+        username: $scope.username,
+        password: $scope.password,
+        fullname: $scope.fullname,
+        email: $scope.email,
+        gender: $scope.gender,
+        birthday: $scope.birthday,
+        schoolfee: "0",
+        marks: "0",
+
+      }
+      if ($scope.username &&$scope.password&&$scope.email&&$scope.gender&&$scope.birthday) {
+        $http.post("http://localhost:3000/students", data)
+        .then(function (res) {
+          alert("Đăng kí thành công");
+        }, function (error) {
+          alert("Đăng kí thất bại");
+        })
+      } else {
+        
+        alert("Đăng kí thất bại")
+      }
+      
+    }
+    // login
+    $scope.login = function (even) {
+      username = $scope.username;
+
+      password = $scope.password;
+
+      for (let index = 0; index < $scope.student.students.length; index++) {
+
+        if (username == $scope.student.students[index].username && password == $scope.student.students[index].password) {
+          $scope.iduser = $scope.student.students[index].id;
+          console.log("oke :", $scope.iduser);
+          var datas = {
+            id: $scope.student.students[index].id,
+            username: $scope.student.students[index].username,
+            password: $scope.student.students[index].password,
+            fullname: $scope.student.students[index].fullname,
+            email: $scope.student.students[index].email,
+            gender: $scope.student.students[index].gender,
+            birthday: $scope.student.students[index].birthday,
+            schoolfee: $scope.student.students[index].schoolfee,
+            marks: $scope.student.students[index].marks,
+
+          }
+          $http.post("http://localhost:3000/datalogin", datas)
+            .then(function (res) {
+              alert("Đăng nhập thành công");
+            }, function (error) {
+              alert("Đăng nhập thất bại");
+            })
+          break;
+        } else {
+          console.log("loi");
+        }
+
+      }
 
     }
-    $http.post("http://localhost:3000/students",data)
-    .then(function (res) {
-      alert("Đăng kí thành công");
-    },function (error) {
-      alert("Đăng kí thất bại");
-    })
-  }
+    function checklogin() {
+      if ($scope.iduser == '') {
+
+      }
+    }
+    // logout
+    $scope.logout = function (even) {
+      $scope.logout = [];
+      $http.get("http://localhost:3000/datalogin")
+        .then(function (reponse) {
+          $scope.logout = reponse.data;
+          console.log($scope.logout[0].id);
+
+          $http.delete("http://localhost:3000/datalogin/" + $scope.logout[0].id + "")
+            .then(function (res) {
+              alert("Đăng xuất thành công");
+            }, function (error) {
+              alert("Đăng xuất thất bại");
+            })
+        })
+
+    }
+    // update
+    $scope.updatedata = function (even) {
+      $scope.dataupdate = [];
+      $http.get("http://localhost:3000/datalogin")
+        .then(function (reponse) {
+          $scope.dataupdate = reponse.data;
+          console.log($scope.dataupdate);
+          var dataupdate = {
+            username: $scope.dataupdate[0].username,
+            password: $scope.dataupdate[0].password,
+            fullname: $scope.fullname,
+            email: $scope.email,
+            gender: $scope.gender,
+            birthday: $scope.birthday,
+            schoolfee: $scope.dataupdate[0].schoolfee,
+            marks: $scope.dataupdate[0].marks,
+
+          }
+          $http.put("http://localhost:3000/students/" + $scope.dataupdate[0].id + "", dataupdate)
+            .then(function (res) {
+              alert("Cập nhật thành công");
+            }, function (error) {
+              alert("cập nhật thất bại");
+            })
+            $http.put("http://localhost:3000/datalogin/" + $scope.dataupdate[0].id + "", dataupdate)
+            
+        })
+
+
+    }
+  })
+
 });
+
 
 
 

@@ -6,30 +6,36 @@
     <div class="form-signin " id="form-signin" ng-controller="register">
 
         <div class="form-container sign-in-container">
-            <form class="form-sg" action="#">
+            <form name="form" class="form-sg" action="#">
                 <h1 class="h1-sign-up">Đăng kí</h1>
                 <div class="social-container">
                   <span>Dùng email</span>
                 </div>
                 <span>Hoặc tạo tài khoản của bạn</span>
-                <input class="col-md-6" ng-model="fullname" type="text" placeholder="Họ và tên" />
+                <input class="col-md-6" name="fullname" required ng-model="fullname" type="text" placeholder="Họ và tên" />
+                <span ng-show="form.fullname.$invalid">Vui lòng nhập tên.</span>
                 <label for=""></label>
-                <input class="col-md-6" ng-model="email" type="email" placeholder="Email" />
+                <input class="col-md-6" name="email" ng-model="email" type="email" placeholder="Email" />
+                <span ng-show="form.email.$invalid">Vui lòng nhập email.</span>
                 <label for=""></label>
-                <input class="col-md-6" ng-model="username" type="text" placeholder="Username" />
+                <input class="col-md-6" name="username" ng-model="username" type="text" placeholder="Username" />
+                <span ng-show="form.username.$invalid">Vui lòng nhập tên đăng nhập.</span>
                 <label for=""></label>
-                <input class="col-md-6" ng-model="password" type="password" placeholder="Password" />
+                <input class="col-md-6" name="password" ng-model="password" type="password" placeholder="Password" />
+                <span ng-show="form.password.$invalid">Vui lòng nhập mật khẩu.</span>
                 <label for=""></label>
-                <input class="col-md-6" ng-model="birthday" type="date" placeholder="Ngày sinh" />
+                <input class="col-md-6" name="birthday" ng-model="birthday" type="date" placeholder="Ngày sinh" />
+                <span ng-show="form.birthday.$invalid">Vui lòng nhập ngày sinh.</span>
                 <div  >
-                  <p class="form-check-label">
-                    <label for="">Giới tính</label>
-                    <input type="radio" class="form-check-input" name="gender" checked value="true"> Nam
-                    <input type="radio" class="form-check-input" name="gender"  value="false"> Nữ
+                  <p >
+                    <label for="">Giới tính
+                    <input ng-model="gender" type="radio" class="form-check-input" name="gender" checked value="Nam"> Nam
+                    <input ng-model="gender" type="radio" class="form-check-input" name="gender"  value="Nữ"> Nữ
+                  </label>
                   </p>
                 </div>
                 <br>
-                <button ng-click="postdata()" class="btn-sign-up">Đăng kí</button>
+                <button type="button" ng-click="postdata()" class="btn-sign-up">Đăng kí</button>
             </form>
     
         </div>
