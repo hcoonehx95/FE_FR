@@ -1,3 +1,21 @@
+<article class="col-md-8 text-center">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                Cập Nhật tài khoản
+            </h4>
+        </div>
+        <div class="panel-body">
+            <div class="form">
+                <form action="">
+                    <div class="">
+                        <div class="col-sm-6 ">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><em class="fa fa-user fa-lg fa-horizon"></em></span>
+                                    <input type="text" maxlength="100" value="" name="fname"
+                                        class="form-control required" placeholder="Họ và tên"
+                                        data-mess="Vui lòng nhập chính xác họ và tên">
 
 
     <article class="col-md-9 text-center">
@@ -31,55 +49,10 @@
             </div>
            
         </div>
-        
 
-     
-       
-    
+    </div>
 
-    </article>
+</article>
 
-    <aside class="col-md-3" ng-controller="subjectCtrl">
-
-  
-        <div class="panel panel-default mt-4">
-          <div class="panel-body">
-            <form style="flex-direction: inherit; padding: 0;" class="form-inline">
-              <input class="form-control col-sm-9" type="search" placeholder="Search" aria-label="Search">
-              <button style="background: none!important;" class="btn" type="submit"><span
-                  class="glyphicon glyphicon-search"></span></button>
-            </form>
-          </div>
-        </div>
-      
-        <div class="panel-group" id="accordion">
-          <div class="panel panel-default">
-            <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-              <span class="glyphicon glyphicon-th-list"></span> <strong>Danh Mục</strong>
-            </div>
-            <ul id="collapse1" class="list-group panel-collapse collapse in" style="height: 0px;">
-              <li class="list-group-item " ng-repeat="sub in list_subject">
-                <a href="#thitracnghiem/{{sub.Id}}/{{sub.Name}}">{{sub.Name}}</a>
-                <span class="label badge">12</span>
-              </li>
-            </ul>
-          </div>
-      
-          <div class="panel panel-default">
-            <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-              <span class="glyphicon glyphicon-list-alt"></span> <strong>Tin Tuc</strong>
-            </div>
-            <ul id="collapse2" class="list-group panel-collapse collapse" style="height: 0px;">
-              <li class="list-group-item ">Apple</li>
-              <li class="list-group-item ">Asus</li>
-              <li class="list-group-item ">Vivo</li>
-              <li class="list-group-item ">Lenovo</li>
-              <li class="list-group-item ">MSI</li>
-              <li class="list-group-item ">HP</li>
-            </ul>
-          </div>
-      
-        </div>
-      
-      </aside>
-      
+<!-- ng-include   aside.html     -->
+<div ng-include="'./template/aside.html'"></div>

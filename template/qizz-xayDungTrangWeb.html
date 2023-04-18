@@ -12,7 +12,7 @@
             <p><span class="text-warning">- Hình thức học:</span> Học trực tuyến thông qua máy tính, điện thoại,
               máy tính bảng có kết nối internet</p>
           </div>
-          
+          <img src="">
         </div>
       </div>
     </div>
@@ -29,6 +29,38 @@
     <div class="col text-center">
       <h3>Kết thúc bài làm môn : {{NameQ}}</span></h3>
       <h3>Điểm của bạn là ({{score}}đ) - <span ng-if="score < 5">Rớt</span><span ng-if="score > 5">Đậu</span> </h3>
+      <!-- tableQuestion______________ -->
+      <div class="tableQuestion" ng-controller="tableQuestion">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th><span id="thc_tst_pdo_1_1">Số thứ tự</span></th>
+              <th><span id="thc_tst_pdo_1_2">Question ID</span></th>
+              <th><span id="thc_tst_pdo_1_3">Tiêu đề</span></th>
+              <th><span id="thc_tst_pdo_1_4">Điểm tối đa</span></th>
+              <th><span id="thc_tst_pdo_1_5">Đạt điểm</span></th>
+              <th><span id="thc_tst_pdo_1_6">Đúng / Sai</span></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>{{answer}}</td>
+              <td>{{answ}}</td>
+              <td>1</td>
+              <td>
+                <span ng-if="answer == answ">1</span>
+                <span ng-if="answer != answ">0</span>
+              </td>
+              <td>
+                <span ng-if="answer == answ">Đúng</span>
+                <span ng-if="answer != answ">Sai</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div>
         <div class="btn btn-primary" ng-click="reset()">Làm lại</div>
         <div class="btn btn-primary">Lưu kết quả</div>
@@ -47,7 +79,7 @@
         </h2>
       </div>
     </div>
-    <!--    lien he -->
+
     <div class="panel panel-default">
       <div class="panel-heading justify-content-between">
         <div>

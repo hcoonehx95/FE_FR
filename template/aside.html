@@ -1,0 +1,41 @@
+<aside class="col-md-4" ng-controller="subjectCtrl">
+
+  <div class="panel panel-default mt-4">
+    <div class="panel-body">
+      <form style="flex-direction: inherit; padding: 0;" class="form-inline">
+        <input class="form-control col-sm-9" type="search" placeholder="Search" aria-label="Search" ng-model="search">
+        <button style="background: none!important; margin: 8px;" class="btn" type="submit"><span
+            class="glyphicon glyphicon-search"></span></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        <span class="glyphicon glyphicon-th-list"></span> <strong>Danh Mục</strong>
+      </div>
+      <ul id="collapse1" class="list-group panel-collapse collapse in" style="height: 0px;">
+        <li class="list-group-item " ng-repeat="sub in list_subject | filter: search ">
+          <a href="#thitracnghiem/{{sub.Id}}/{{sub.Name}}">{{sub.Name}}</a>
+          <span class="label badge">12</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <span class="glyphicon glyphicon-list-alt"></span> <strong>Tin Tuc</strong>
+      </div>
+      <ul id="collapse2" class="list-group panel-collapse collapse" style="height: 0px;">
+        <li class="list-group-item "><a href="">Top 10 thành viên có điểm cao và nhanh nhất</a></li> 
+        <li class="list-group-item "><a href="">FPT Polytechnic đã phát triển như thế nào</a></li>
+        <li class="list-group-item "><a href="">Có các hoạt động ngoại khoá cho các thành viên</a></li>
+        <li class="list-group-item "><a href="">Top 5 thành viên gia tích cực</a></li>
+        <li class="list-group-item "><a href="">Chương trình chắp cánh ướt mơ</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</aside>

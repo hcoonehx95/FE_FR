@@ -1,74 +1,58 @@
 <div class="">
-    
-    <article class="col-md-9 text-center">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                   Thông tin tài khoản
-                </h4>
-            </div>
-            <div class="panel-body">
-                <div class="form">
-                    <label for="">Họ Tên</label>: <strong>Name</strong>
-                    <label for="">Email</label>: <strong>Name</strong>
-                    <label for="">Giới tính</label>: <strong>Name</strong>
-                    <label for="">Ngày sinh</label>: <strong>Name</strong>
-                    <label for="">Học phí</label>: <strong>Name</strong>
-                </div>
-            </div>
-                   
+
+  <article class="col-md-8 text-center">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          Thông tin tài khoản
+        </h4>
+      </div>
+      <div class="panel-body text-left row" style="display:flex">
+        <div class="form col-md-7">
+          <label for="">Họ Tên</label>: <strong>Name</strong> <br>
+          <label for="">Email</label>: <strong>Name</strong> <br>
+          <label for="">Giới tính</label>: <strong>Name</strong> <br>
+          <label for="">Ngày sinh</label>: <strong>Name</strong> <br>
+          <label for="">Học phí</label>: <strong>Name</strong>
         </div>
-        
-
-     
-       
-    
-
-    </article>
-
-    <aside class="col-md-3" ng-controller="subjectCtrl">
-
-  
-      <div class="panel panel-default mt-4">
-        <div class="panel-body">
-          <form style="flex-direction: inherit; padding: 0;" class="form-inline">
-            <input class="form-control col-sm-9" type="search" placeholder="Search" aria-label="Search">
-            <button style="background: none!important;" class="btn" type="submit"><span
-                class="glyphicon glyphicon-search"></span></button>
-          </form>
+        <div class="img_avt col-md-5">
+          <div class="box_img">
+            <img src="./images/8099496.png" alt="img_avt">
+          </div>
         </div>
       </div>
-    
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-            <span class="glyphicon glyphicon-th-list"></span> <strong>Danh Mục</strong>
-          </div>
-          <ul id="collapse1" class="list-group panel-collapse collapse in" style="height: 0px;">
-            <li class="list-group-item " ng-repeat="sub in list_subject">
-              <a href="#thitracnghiem/{{sub.Id}}/{{sub.Name}}">{{sub.Name}}</a>
-              <span class="label badge">12</span>
-            </li>
-          </ul>
+
+      <div class="subject_infor panel-body" ng-controller="subjectCtrl">
+        <div class="box_subject">
+          <h3 class="text-left">Thành tích các khoá học</h3>
         </div>
-    
-        <div class="panel panel-default">
-          <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-            <span class="glyphicon glyphicon-list-alt"></span> <strong>Tin Tuc</strong>
+
+        <div class="row" style="display: flex;">
+          <div class="subject_left col-md-6">
+            <ul id="collapse1" class="list-group panel-collapse collapse in">
+              <li class="list-group-item " ng-repeat="sub in list_subject | limitTo: (list_subject.length/2)">
+                <p class="text-left"><span class="labelName">{{sub.Name}}</span><span class="label badge">Chưa học</span></p>
+                
+              </li>
+            </ul>
           </div>
-          <ul id="collapse2" class="list-group panel-collapse collapse" style="height: 0px;">
-            <li class="list-group-item ">Apple</li>
-            <li class="list-group-item ">Asus</li>
-            <li class="list-group-item ">Vivo</li>
-            <li class="list-group-item ">Lenovo</li>
-            <li class="list-group-item ">MSI</li>
-            <li class="list-group-item ">HP</li>
-          </ul>
+
+          <div class="subject_right col-md-6">
+            <ul id="collapse1" class="list-group panel-collapse collapse in">
+              <li class="list-group-item " ng-repeat="sub in list_subject | limitTo: list_subject.length : (list_subject.length/2)">
+                <p class="text-left"><span class="labelName">{{sub.Name}}</span><span class="label badge">Chưa học</span></p>
+                
+              </li>
+            </ul>
+          </div>
         </div>
-    
       </div>
-    
-    </aside>
-    
+
+    </div>
+
+  </article>
+
+  <!-- ng-include   aside.html     -->
+  <div ng-include="'./template/aside.html'"></div>
 
 </div>

@@ -26,16 +26,13 @@ app.config(function ($routeProvider) {
     .when('/quenmk', {
       templateUrl: './quenmk.html'
     })
-    .otherwise({
-      redirectTo: "/"
-    })
     .when('/dangki', {
       templateUrl: './dangki.html'
     })
     .when('/dangnhap', {
       templateUrl: './dangnhap.html'
     })
-    .when('/thongtintaikhoan', {
+    .when('/thongtintk', {
       templateUrl: './thongtintaikhoan.html'
     })
     .when('/capnhattk', {
@@ -173,17 +170,25 @@ app.controller("register", function ($scope, $http) {
 
 
 
-
-//  controller ______________________________
+//  controller quizCtrl ______________________________
 
 app.controller("quizCtrl", function ($scope, $http, $routeParams, quizFactory) {
-  $http.get("../db/Quizs/" + $routeParams.Id + ".js").then(function (reponse) {
-    quizFactory.questions = reponse.data;
-  });
+  // $http.get("../db/Quizs/" + $routeParams.Id + ".js").then(function (reponse) {
+  //   quizFactory.questions = reponse.data;
+  // });
 });
 
-app.controller("")
-//  controller ______________________________
+
+
+
+//  controller tableQuestion ______________________________
+
+app.controller("tableQuestion", function($scope) {
+
+});
+
+
+//  controller subjectCtrl ______________________________
 
 app.controller("subjectCtrl", function ($scope, $http) {
   $scope.list_subject = [];
@@ -238,6 +243,13 @@ app.directive("rowArticle", function (quizFactory) {
     templateUrl: "./template/qizz-xayDungTrangWeb.html",
     link: function (scope, elem, attrs) {
 
+      var sts = [];
+      // var answers = {
+      //   id: answ
+      // };
+
+      var sttQ = 1;
+
       // Start
       scope.start = function () {
         scope.index = 0;
@@ -246,11 +258,14 @@ app.directive("rowArticle", function (quizFactory) {
         scope.time = 60 * 10;
         scope.timeOut();
         scope.getQuestion();
+        scope.paginations();
       };
       // Reset
       scope.reset = function () {
         scope.inProgess = false;
         scope.score = 0;
+        scope.NameQ = questions.name;
+        scope.LogoQ = questions.logo;
       };
       // getQuestion
       scope.getQuestion = function () {
@@ -275,6 +290,13 @@ app.directive("rowArticle", function (quizFactory) {
         // alert("answer");
         if (!$("input[name = answer]:checked").length) return;
         var answ = $("input[name = answer]:checked").val();
+
+        
+        // answers.push(angular.copy(answ));
+        // console.log(answers);
+        sts.push(angular.copy(answ));
+        console.log(sts);
+
         if (answ == scope.answer) {
           // alert("Chinh xac !");
           scope.score++;
@@ -300,7 +322,6 @@ app.directive("rowArticle", function (quizFactory) {
       };
       // thoi gian
       scope.timeOut = function timefun() {
-
         scope.time--;
         scope.minute = Math.floor(scope.time / 60);
         scope.second = scope.time % 60;
@@ -313,7 +334,12 @@ app.directive("rowArticle", function (quizFactory) {
           scope.a = scope.time;
           scope.getQuestion();
         }
-      }
+      };
+
+      scope.paginations = function () {
+        // document.write("<p>hello</p>");
+        // console.log(questions.length);
+      };
 
       // scope.reset
       scope.reset();
@@ -322,22 +348,22 @@ app.directive("rowArticle", function (quizFactory) {
 });
 
 // factory ______________________________
-app.factory('quizFactory', function ($http, $routeParams) {
+app.factory("quizFactory", function ($http, $routeParams) {
   $http.get("../db/Quizs/" + $routeParams.id + ".js").then(function (reponse) {
     questions = reponse.data;
-    // console.log(questions);
+    questions.name = $routeParams.name;
+    questions.logo = $routeParams.logo;
   });
   return {
     getQuestion: function (index) {
-      var randomItem = questions[Math.floor(Math.random() * questions.length)];
+      // var randomItem = questions[Math.floor(Math.random() * questions.length)];
       var countQ = questions.length;
-      if (countQ > 10) countQ = 10;
-      if (index < 10) {
-        return randomItem;
+      if (countQ > 2) countQ = 2;
+      if (index < 2) {
+        return questions[index];
       } else {
         return false;
       }
-    }
+    },
   };
 });
-
