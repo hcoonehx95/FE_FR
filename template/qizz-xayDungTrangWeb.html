@@ -44,18 +44,18 @@
           </thead>
 
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>{{answer}}</td>
-              <td>{{answ}}</td>
+            <tr ng-repeat="x in sts">
+              <td>{{x.id}}</td>
+              <td>{{x.id_quiz}}</td>
+              <td>{{x.quest}}</td>
               <td>1</td>
               <td>
-                <span ng-if="answer == answ">1</span>
-                <span ng-if="answer != answ">0</span>
+                <span ng-if="x.ans_check == x.id_ans">1</span>
+                <span ng-if="x.ans_check != x.id_ans">0</span>
               </td>
               <td>
-                <span ng-if="answer == answ">Đúng</span>
-                <span ng-if="answer != answ">Sai</span>
+                <span ng-if="x.ans_check == x.id_ans">Đúng</span>
+                <span ng-if="x.ans_check != x.id_ans">Sai</span>
               </td>
             </tr>
           </tbody>
@@ -92,7 +92,7 @@
         <label class="form-check-label"> {{index+1}}. {{question}} </label>
         <hr>
         <form action="">
-
+          <input type="hidden" name="" ng-model="sts.question">
           <div class="form-check " ng-repeat="option in options">
             <p class="form-check-label">
               <input type="radio" class="form-check-input" name="answer" value="{{option.Id}}"> {{option.Text}}
@@ -104,7 +104,7 @@
       <div class="panel-footer d-flex justify-content-between">
 
         <button ng-show="answerMode" ng-click="checkAnswer()" class="btn btn-primary">Submit</button>
-        <ul class="pager m-1 float-right">
+        <ul class="pager m-1" style="float: right; margin-bottom: 12px;">
           <li><button ng-click="prevQuestion()"><span class="glyphicon glyphicon-hand-left"></span></button></li>
           <li><button ng-show="!answerMode" ng-click="nextQuestion()"><span
                 class="glyphicon glyphicon-hand-right"></span></button></li>

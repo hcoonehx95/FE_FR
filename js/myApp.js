@@ -1,71 +1,76 @@
-var app = angular.module("myApp", ['ngRoute']);
+var app = angular.module("myApp", ["ngRoute"]);
 
 // Route _________________________________
 
 app.config(function ($routeProvider) {
   $routeProvider
-    .when('/', {
-      templateUrl: './home.html'
+    .when("/", {
+      templateUrl: "./home.html",
     })
-    .when('/thitracnghiem/:id/:name', {
-      templateUrl: './thitracnghiem.html',
-      controller: 'quizCtrl'
+    .when("/thitracnghiem/:id/:name", {
+      templateUrl: "./thitracnghiem.html",
+      controller: "quizCtrl",
     })
-    .when('/gioithieu', {
-      templateUrl: './gioithieu.html'
+    .when("/gioithieu", {
+      templateUrl: "./gioithieu.html",
     })
-    .when('/gopy', {
-      templateUrl: './gopy.html'
+    .when("/gopy", {
+      templateUrl: "./gopy.html",
     })
-    .when('/lienhe', {
-      templateUrl: './lienhe.html'
+    .when("/lienhe", {
+      templateUrl: "./lienhe.html",
     })
-    .when('/capnhattk', {
-      templateUrl: './capnhattk.html'
+    .when("/capnhattk", {
+      templateUrl: "./capnhattk.html",
     })
-    .when('/quenmk', {
-      templateUrl: './quenmk.html'
+    .when("/quenmk", {
+      templateUrl: "./quenmk.html",
     })
-    .when('/dangki', {
-      templateUrl: './dangki.html'
+    .when("/dangki", {
+      templateUrl: "./dangki.html",
     })
-    .when('/dangnhap', {
-      templateUrl: './dangnhap.html'
+    .when("/dangnhap", {
+      templateUrl: "./dangnhap.html",
     })
-    .when('/thongtintk', {
-      templateUrl: './thongtintaikhoan.html'
+    .when("/thongtintk", {
+      templateUrl: "./thongtintaikhoan.html",
     })
     .otherwise({
-      redirectTo: "/"
-    })
+      redirectTo: "/",
+    });
 });
 
 //  controller register ______________________________
 
 app.controller("register", function ($scope, $http) {
-  $scope.postdata = function (even) {
-    var data = {
-      id: Math.random(),
-      username: $scope.username,
-      password: $scope.password,
-      fullname: $scope.fullname,
-      email: $scope.email,
-      gender: $scope.gender,
-      birthday: $scope.birthday,
-      schoolfee: "0",
-      marks:"0",
-
-    }
-    $http.post("http://localhost:3000/students",data)
-    .then(function (res) {
-      alert("Đăng kí thành công");
-    },function (error) {
-      alert("Đăng kí thất bại");
-    })
-  }
+  $scope.students = [];
+  $http.get("../db/Students.json").then(function (reponse) {
+    $scope.students = reponse.data;
+    
+    $scope.postdata = function (even) {
+      var data = {
+        id: $scope.students.students.length + 1,
+        username: $scope.username,
+        password: $scope.password,
+        fullname: $scope.fullname,
+        email: $scope.email,
+        gender: $scope.gender,
+        birthday: $scope.birthday,
+        schoolfee: "0",
+        marks: "0",
+      };
+      $http.post("http://localhost:3000/students", data).then(
+        function (res) {
+          alert("Đăng kí thành công");
+        },
+        function (error) {
+          alert("Đăng kí thất bại");
+        }
+      );
+    };
+    
+  });
 });
-
-
 
 //  controller quizCtrl ______________________________
 
@@ -75,15 +80,9 @@ app.controller("quizCtrl", function ($scope, $http, $routeParams, quizFactory) {
   // });
 });
 
-
-
-
 //  controller tableQuestion ______________________________
 
-app.controller("tableQuestion", function($scope) {
-
-});
-
+app.controller("tableQuestion", function ($scope) {});
 
 //  controller subjectCtrl ______________________________
 
@@ -121,15 +120,7 @@ app.controller("subjectCtrl", function ($scope, $http) {
     };
     // console.log($scope.begin);
   });
-
 });
-
-
-
-
-
-
-
 
 //  directive______________________________
 
@@ -139,12 +130,11 @@ app.directive("rowArticle", function (quizFactory) {
     scope: {},
     templateUrl: "./template/qizz-xayDungTrangWeb.html",
     link: function (scope, elem, attrs) {
-
       var sts = [];
       // var answers = {
       //   id: answ
       // };
-
+      
       var sttQ = 1;
 
       // Start
@@ -155,7 +145,7 @@ app.directive("rowArticle", function (quizFactory) {
         scope.time = 60 * 10;
         scope.timeOut();
         scope.getQuestion();
-        scope.paginations();
+        // scope.paginations();
       };
       // Reset
       scope.reset = function () {
@@ -166,8 +156,9 @@ app.directive("rowArticle", function (quizFactory) {
       };
       // getQuestion
       scope.getQuestion = function () {
-        let quiz = quizFactory.getQuestion(scope.index);
+        var quiz = quizFactory.getQuestion(scope.index);
         if (quiz) {
+          scope.id_Q = quiz.Id;
           scope.question = quiz.Text;
           scope.options = quiz.Answers;
           scope.answer = quiz.AnswerId;
@@ -175,24 +166,32 @@ app.directive("rowArticle", function (quizFactory) {
         } else {
           scope.quizOver = true;
         }
-
+        
         if (scope.a == 0) {
           quiz = 0;
           scope.quizOver = true;
-          // console.log("abc");
         }
+        console.log(scope.answer);
       };
+      // scope.domain = new scope.getQuestion();
+      
       // checkAnswer
       scope.checkAnswer = function () {
         // alert("answer");
         if (!$("input[name = answer]:checked").length) return;
         var answ = $("input[name = answer]:checked").val();
+        scope.id = 1;
+        let demo = {
+          id : sts.length +1,
+          id_quiz : scope.id_Q,
+          id_ans : scope.answer,
+          quest : scope.question,
+          ans_check : answ,
+        }
 
-        
-        // answers.push(angular.copy(answ));
-        // console.log(answers);
-        sts.push(angular.copy(answ));
-        console.log(sts);
+        sts.push(angular.copy(demo));
+        console.log("array(sts) la :",sts.length);
+        scope.sts = sts;
 
         if (answ == scope.answer) {
           // alert("Chinh xac !");
@@ -233,12 +232,7 @@ app.directive("rowArticle", function (quizFactory) {
         }
       };
 
-      scope.paginations = function () {
-        // document.write("<p>hello</p>");
-        // console.log(questions.length);
-      };
-
-      // scope.reset
+      
       scope.reset();
     },
   };
@@ -255,8 +249,8 @@ app.factory("quizFactory", function ($http, $routeParams) {
     getQuestion: function (index) {
       // var randomItem = questions[Math.floor(Math.random() * questions.length)];
       var countQ = questions.length;
-      if (countQ > 2) countQ = 2;
-      if (index < 2) {
+      if (countQ > 10) countQ = 10;
+      if (index < 10) {
         return questions[index];
       } else {
         return false;

@@ -1,37 +1,62 @@
-﻿{
-    "students":[
-        {
-            "id":1,
-            "username": "thuongtv",
-            "password": "1234567",
-            "fullname": "Truong Van Thoung",
-            "email": "thuongtv@fpt.edu.vn",
-            "gender": "true",
-            "birthday": "2001-01-01",
-            "schoolfee": "1700000",
-            "marks": "0"
-        },
-        {
-            "id":2,
-            "username": "pheonv",
-            "password": "iloveyou",
-            "fullname": "Nguyễn Văn Chí Phèo",
-            "email": "pheonv@fpt.edu.vn",
-            "gender": "true",
-            "birthday": "1985-10-11",
-            "schoolfee": "2500000",
-            "marks": "0"
-        },
-        {
-            "id":3,
-            "username": "nopt",
-            "password": "iloveyou",
-            "fullname": "Phạm Thị Nở",
-            "email": "nopt@fpt.edu.vn",
-            "gender": "false",
-            "birthday": "1993-05-15",
-            "schoolfee": "2000000",
-            "marks": "0"
-        }
-    ]
+{
+  "students": [
+    {
+      "id": 1,
+      "username": "thuongtv",
+      "password": "1234567",
+      "fullname": "Truong Van Thoung",
+      "email": "thuongtv@fpt.edu.vn",
+      "gender": "true",
+      "birthday": "2001-01-01",
+      "schoolfee": "1700000",
+      "marks": "0"
+    },
+    {
+      "id": 2,
+      "username": "pheonv",
+      "password": "iloveyou",
+      "fullname": "Nguyễn Văn Chí Phèo",
+      "email": "pheonv@fpt.edu.vn",
+      "gender": "true",
+      "birthday": "1985-10-11",
+      "schoolfee": "2500000",
+      "marks": "0"
+    },
+    {
+      "id": 3,
+      "username": "nopt",
+      "password": "iloveyou",
+      "fullname": "Phạm Thị Nở",
+      "email": "nopt@fpt.edu.vn",
+      "gender": "false",
+      "birthday": "1993-05-15",
+      "schoolfee": "2000000",
+      "marks": "0"
+    },
+    {
+      "id": 4,
+      "schoolfee": "0",
+      "marks": "0"
+    },
+    {
+      "id": 5,
+      "username": "123",
+      "password": "123",
+      "fullname": "123",
+      "birthday": "1231-03-11T16:53:30.000Z",
+      "schoolfee": "0",
+      "marks": "0"
+    },
+    {
+      "id": 6,
+      "fullname": "123123",
+      "schoolfee": "0",
+      "marks": "0"
+    },
+    {
+      "id": 7,
+      "schoolfee": "0",
+      "marks": "0"
+    }
+  ]
 }
