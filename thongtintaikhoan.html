@@ -24,27 +24,32 @@
 
       <div class="subject_infor panel-body" ng-controller="subjectCtrl">
         <div class="box_subject">
-          <h3 class="text-left">Thành tích các khoá học</h3>
+          <h3 class="text-left">Thành tích các khoá học 
+            <span ng-if="studs.dataCourse.id_acc != studs.datalogin.id">(0)</span>
+            <span ng-if="studs.dataCourse.id_acc == studs.datalogin.id">({{studs.dataCourse.length}})</span> 
+          </h3>
         </div>
 
-        <div class="row" style="display: flex;">
+        <div class="row" style="display: flex;"  ng-if="studs.dataCourse.id_acc == studs.datalogin.id">
           <div class="subject_left col-md-6">
             <ul id="collapse1" class="list-group panel-collapse collapse in">
-              <li class="list-group-item " ng-repeat="sub in list_subject | limitTo: (list_subject.length/2)">
-                <p class="text-left"><span class="labelName">{{sub.Name}}</span><span class="label badge">Chưa học</span></p>
-                
+              <li class="list-group-item " ng-repeat="sub in studs.dataCourse | limitTo: (studs.dataCourse.length/2)">
+                <p class="text-left"><span class="labelName">{{sub.nameCource}}</span><span class="label badge">{{sub.markCource}}</span></p>
               </li>
             </ul>
           </div>
 
           <div class="subject_right col-md-6">
             <ul id="collapse1" class="list-group panel-collapse collapse in">
-              <li class="list-group-item " ng-repeat="sub in list_subject | limitTo: list_subject.length : (list_subject.length/2)">
-                <p class="text-left"><span class="labelName">{{sub.Name}}</span><span class="label badge">Chưa học</span></p>
+              <li class="list-group-item " ng-repeat="sub in studs.dataCourse | limitTo: list_subject.length : (studs.dataCourse.length/2)">
+                <p class="text-left"><span class="labelName">{{sub.nameCource}}</span><span class="label badge">{{sub.markCource}}</span></p>
                 
               </li>
             </ul>
           </div>
+        </div>
+
+        <div class="row" hidden style="display: flex;"  ng-if="student.dataCourse.id_acc != student.datalogin.id">
         </div>
       </div>
 

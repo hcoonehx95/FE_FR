@@ -4,7 +4,7 @@
       "id": 1,
       "username": "thuongtv",
       "password": "1234567",
-      "fullname": "Truong Van Thoung",
+      "fullname": "Truong Van Thuong",
       "email": "thuongtv@fpt.edu.vn",
       "gender": "Nam",
       "birthday": "2001-01-01",
@@ -64,12 +64,28 @@
       "id": 1,
       "username": "thuongtv",
       "password": "1234567",
-      "fullname": "Truong Van Thoung",
+      "fullname": "Truong Van Thuong",
       "email": "thuongtv@fpt.edu.vn",
       "gender": "Nam",
       "birthday": "2001-01-01",
       "schoolfee": "1700000",
       "marks": "0"
+    }
+  ],
+  "dataCourse": [
+    {
+      "id": 1,
+      "id_acc": 1,
+      "id_cource": "ADAV",
+      "nameCource": "Lập trình Android nâng cao",
+      "markCource": 1
+    },
+    {
+      "id": 2,
+      "id_acc": 1,
+      "id_cource": "ADAV",
+      "nameCource": "Lập trình Android nâng cao",
+      "markCource": 2
     }
   ]
 }
