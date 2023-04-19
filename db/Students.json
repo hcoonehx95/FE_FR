@@ -32,31 +32,6 @@
       "birthday": "1993-05-15",
       "schoolfee": "2000000",
       "marks": "0"
-    },
-    {
-      "id": 4,
-      "schoolfee": "0",
-      "marks": "0"
-    },
-    {
-      "id": 5,
-      "username": "123",
-      "password": "123",
-      "fullname": "123",
-      "birthday": "1231-03-11T16:53:30.000Z",
-      "schoolfee": "0",
-      "marks": "0"
-    },
-    {
-      "id": 6,
-      "fullname": "123123",
-      "schoolfee": "0",
-      "marks": "0"
-    },
-    {
-      "id": 7,
-      "schoolfee": "0",
-      "marks": "0"
     }
   ],
   "datalogin": [
@@ -75,13 +50,6 @@
   "dataCourse": [
     {
       "id": 1,
-      "id_acc": 1,
-      "id_cource": "ADAV",
-      "nameCource": "Lập trình Android nâng cao",
-      "markCource": 1
-    },
-    {
-      "id": 2,
       "id_acc": 1,
       "id_cource": "ADAV",
       "nameCource": "Lập trình Android nâng cao",
