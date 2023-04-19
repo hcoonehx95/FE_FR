@@ -34,82 +34,50 @@
       "marks": "0"
     },
     {
-      "id": 4,
       "username": "hungpp",
-      "password": "hungpp",
+      "password": "abc",
       "fullname": "hùng",
       "email": "bhoome22@gmail.com",
-      "birthday": "2018-01-13T17:00:00.000Z",
+      "gender": "Nam",
+      "birthday": "2023-04-19T17:00:00.000Z",
       "schoolfee": "0",
-      "marks": "0"
+      "marks": "0",
+      "id": 4
     },
     {
       "id": 5,
-      "username": "pheonv",
-      "password": "iloveyou",
+      "username": "demo1",
+      "password": "demo1",
+      "fullname": "demo1",
+      "email": "demo@gmail.com",
+      "gender": "Nam",
+      "birthday": "2023-04-18T17:00:00.000Z",
       "schoolfee": "0",
       "marks": "0"
     },
     {
       "id": 6,
-      "username": "pheonv",
-      "password": "iloveyou",
-      "schoolfee": "0",
-      "marks": "0"
-    },
-    {
-      "id": 7,
-      "username": "pheonv",
-      "password": "iloveyou",
-      "schoolfee": "0",
-      "marks": "0"
-    },
-    {
-      "id": 8,
-      "username": "pheonv",
-      "password": "iloveyou",
-      "schoolfee": "0",
-      "marks": "0"
-    },
-    {
-      "id": 9,
-      "username": "pheonv",
-      "password": "iloveyou",
-      "schoolfee": "0",
-      "marks": "0"
-    },
-    {
-      "id": 10,
-      "username": "pheonv",
-      "password": "iloveyou",
-      "schoolfee": "0",
-      "marks": "0"
-    },
-    {
-      "id": 11,
-      "username": "pheonv",
-      "password": "iloveyou",
-      "schoolfee": "0",
-      "marks": "0"
-    },
-    {
-      "id": 12,
-      "username": "pheonv",
-      "password": "iloveyou",
-      "schoolfee": "0",
-      "marks": "0"
-    },
-    {
-      "id": 13,
-      "username": "pheonv",
-      "password": "iloveyou",
-      "fullname": "hùngpp",
-      "email": "bhoome22@gmail.com",
+      "username": "demo2",
+      "password": "demo2",
+      "fullname": "demo2",
+      "email": "demo2@gmail.com",
       "gender": "Nam",
-      "birthday": "2023-04-28T17:00:00.000Z",
+      "birthday": "2023-04-18T17:00:00.000Z",
       "schoolfee": "0",
       "marks": "0"
     }
   ],
-  "datalogin": []
+  "datalogin": [
+    {
+      "id": 6,
+      "username": "demo2",
+      "password": "demo2",
+      "fullname": "demo2",
+      "email": "demo2@gmail.com",
+      "gender": "Nam",
+      "birthday": "2023-04-18T17:00:00.000Z",
+      "schoolfee": "0",
+      "marks": "0"
+    }
+  ]
 }

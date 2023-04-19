@@ -1,0 +1,30 @@
+<article class="col-md-8 text-center">
+    <div class="form-signin " id="form-signin" ng-controller="register">
+
+        <div class="form-container sign-in-container">
+            <form name="form" class="form-sg" action="#">
+                <h1 class="h1-sign-up">Cập nhât Mật khẩu</h1>
+
+                <input required class="col-md-6" name="password" ng-model="password" type="password" placeholder="Mật khẩu cũ" />
+                <span ng-show="form.password.$invalid">Vui lòng nhập password.</span>
+                <label for=""></label>
+                <input required class="col-md-6" name="newpassword" ng-model="newpassword" type="password" placeholder="Mật khẩu mới" />
+                <span ng-show="form.newpassword.$invalid">Vui lòng nhập password.</span>
+                <input required class="col-md-6" name="newpassword2" ng-model="newpassword2" type="password" placeholder="Mật khẩu mới" />
+                <span ng-show="form.newpassword2.$invalid">Vui lòng nhập password.</span>
+
+               
+                <br>
+                <button type="button" ng-click="updatepassword()" class="btn-sign-up">Cập nhật</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    </div>
+
+</article>
+
+<!-- ng-include   aside.html     -->
+<div ng-include="'./template/aside.html'"></div>

@@ -1,14 +1,14 @@
 <article class="col-md-12 text-center">
-  <div class="form-signin " id="form-signin">
+  <div class="form-signin " id="form-signin" ng-controller="register">
 
     <div name="form" class="form-container sign-in-container">
       <form class="form-sg" action="#">
         <h1 class="h1-sign-up">Quên mật khẩu</h1>
 
-        <input class="col-md-6" type="email" placeholder="Username" />
+        <input ng-model="username" class="col-md-6" type="email" placeholder="Username" />
 
         <label for=""></label>
-        <input class="col-md-6" type="password" placeholder="Email" />
+        <input ng-model="email" class="col-md-6" type="email" placeholder="Email" />
         <iframe title="reCAPTCHA"
           src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeCch0UAAAAAKrftQUTIjPOxFo5KYJTiFmaH-DJ&amp;co=aHR0cHM6Ly9udWtldmlldC52bjo0NDM.&amp;hl=vi&amp;type=image&amp;v=vpEprwpCoBMgy-fvZET0Mz6L&amp;size=normal&amp;cb=di8mhcyje175"
           width="304" height="78" role="presentation" name="a-bkuanbusrlrd" frameborder="0" scrolling="no"

@@ -121,13 +121,13 @@ app.controller("register", function ($scope, $http) {
               window.location = "http://127.0.0.1:5502/#/";
             },
             function (error) {
-              alert("Đăng nhập thất bại 1");
+              alert("Đăng nhập thất bại ");
               // console.log("hello");
             }
           );
           break;
         } else {
-          alert("Đăng nhập thất bại 2");
+          alert("Đăng nhập thất bại");
           console.log("Loi vong lap (for)");
         }
       }

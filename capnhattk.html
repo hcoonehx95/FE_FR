@@ -5,14 +5,14 @@
             <form name="form" class="form-sg" action="#">
                 <h1 class="h1-sign-up">Cập nhât thông tin</h1>
 
-                <input class="col-md-6" name="fullname" ng-model="fullname" type="text" placeholder="Họ và tên" />
+                <input required class="col-md-6" name="fullname" ng-model="fullname" type="text" placeholder="Họ và tên" />
                 <span ng-show="form.fullname.$invalid">Vui lòng nhập tên.</span>
                 <label for=""></label>
-                <input class="col-md-6" name="email" ng-model="email" type="email" placeholder="Email" />
+                <input required class="col-md-6" name="email" ng-model="email" type="email" placeholder="Email" />
                 <span ng-show="form.email.$invalid">Vui lòng nhập email.</span>
 
                 <label for=""></label>
-                <input class="col-md-6" name="birthday" ng-model="birthday" type="date" placeholder="Ngày sinh" />
+                <input required class="col-md-6" name="birthday" ng-model="birthday" type="date" placeholder="Ngày sinh" />
                 <span ng-show="form.birthday.$invalid">Vui lòng nhập ngày sinh.</span>
                 <div>
                     <p>
@@ -31,7 +31,7 @@
 
     </div>
 
-    </div>
+    
 
 </article>
 
