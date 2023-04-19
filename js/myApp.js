@@ -48,8 +48,8 @@ app.config(function ($routeProvider) {
 app.controller("register", function ($scope, $http) {
   $scope.student = [];
   $scope.formHidden = true;
-  $http.get("./Students.json").then(function (reponse) {
-  // $http.get("../db/Students.json").then(function (reponse) {
+  // $http.get("./Students.json").then(function (reponse) {
+  $http.get("../db/Students.json").then(function (reponse) {
     $scope.student = reponse.data;
     console.log($scope.student.datalogin);
    

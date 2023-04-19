@@ -113,17 +113,6 @@
   ],
   "datalogin": [
     {
-      "id": 1,
-      "username": "thuongtv",
-      "password": "1234567",
-      "fullname": "Truong Van Thoung",
-      "email": "thuongtv@fpt.edu.vn",
-      "gender": "true",
-      "birthday": "2001-01-01",
-      "schoolfee": "1700000",
-      "marks": "0"
-    },
-    {
       "id": 4,
       "username": "hungpp",
       "password": "hungpp",
