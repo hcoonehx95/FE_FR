@@ -168,6 +168,7 @@ app.controller("register", function ($scope, $http) {
     };
     // update mk
     $scope.updatepassword = function (even) {
+      
       $scope.dataupdate = [];
       $http.get("http://localhost:3000/datalogin").then(function (reponse) {
         $scope.dataupdate = reponse.data;
