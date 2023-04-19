@@ -1,56 +1,37 @@
 <article class="col-md-8 text-center">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                Cập Nhật tài khoản
-            </h4>
-        </div>
-        <div class="panel-body">
-            <div class="form">
-                <form action="">
-                    <div class="">
-                        <div class="col-sm-6 ">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><em class="fa fa-user fa-lg fa-horizon"></em></span>
-                                    <input type="text" maxlength="100" value="" name="fname"
-                                        class="form-control required" placeholder="Họ và tên"
-                                        data-mess="Vui lòng nhập chính xác họ và tên">
+    <div class="form-signin " id="form-signin" ng-controller="register">
 
+        <div class="form-container sign-in-container">
+            <form name="form" class="form-sg" action="#">
+                <h1 class="h1-sign-up">Cập nhât thông tin</h1>
 
-    <article class="col-md-9 text-center">
-        <div class="form-signin " id="form-signin" ng-controller="register">
+                <input required class="col-md-6" name="fullname" ng-model="fullname" type="text" placeholder="Họ và tên" />
+                <span ng-show="form.fullname.$invalid">Vui lòng nhập tên.</span>
+                <label for=""></label>
+                <input required class="col-md-6" name="email" ng-model="email" type="email" placeholder="Email" />
+                <span ng-show="form.email.$invalid">Vui lòng nhập email.</span>
 
-            <div class="form-container sign-in-container">
-                <form name="form" class="form-sg" action="#">
-                    <h1 class="h1-sign-up">Cập nhât thông tin</h1>
-                    
-                    <input class="col-md-6" name="fullname" ng-model="fullname" type="text" placeholder="Họ và tên" />
-                    <span ng-show="form.fullname.$invalid">Vui lòng nhập tên.</span>
-                    <label for=""></label>
-                    <input class="col-md-6" name="email" ng-model="email" type="email" placeholder="Email" />
-                    <span ng-show="form.email.$invalid">Vui lòng nhập email.</span>
-                    
-                    <label for=""></label>
-                    <input class="col-md-6" name="birthday" ng-model="birthday" type="date" placeholder="Ngày sinh" />
-                    <span ng-show="form.birthday.$invalid">Vui lòng nhập ngày sinh.</span>
-                    <div  >
-                      <p >
+                <label for=""></label>
+                <input required class="col-md-6" name="birthday" ng-model="birthday" type="date" placeholder="Ngày sinh" />
+                <span ng-show="form.birthday.$invalid">Vui lòng nhập ngày sinh.</span>
+                <div>
+                    <p>
                         <label for="">Giới tính
-                        <input ng-model="gender" type="radio" class="form-check-input" name="gender" checked value="Nam"> Nam
-                        <input ng-model="gender" type="radio" class="form-check-input" name="gender"  value="Nữ"> Nữ
-                      </label>
-                      </p>
-                    </div>
-                    <br>
-                    <button type="button" ng-click="updatedata()" class="btn-sign-up">Cập nhật</button>
-                </form>
-        
-            </div>
-           
+                            <input ng-model="gender" type="radio" class="form-check-input" name="gender" checked
+                                value="Nam"> Nam
+                            <input ng-model="gender" type="radio" class="form-check-input" name="gender" value="Nữ"> Nữ
+                        </label>
+                    </p>
+                </div>
+                <br>
+                <button type="button" ng-click="updatedata()" class="btn-sign-up">Cập nhật</button>
+            </form>
+
         </div>
 
     </div>
+
+    
 
 </article>
 

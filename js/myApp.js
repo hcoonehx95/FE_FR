@@ -38,6 +38,9 @@ app.config(function ($routeProvider) {
     .when("/capnhattk", {
       templateUrl: "./capnhattk.html",
     })
+    .when("/doimk", {
+      templateUrl: "./doimk.html",
+    })
     .otherwise({
       redirectTo: "/",
     });
@@ -49,17 +52,17 @@ app.controller("register", function ($scope, $http) {
   $scope.student = [];
 
   // $http.get("./Students.json").then(function (reponse) {
-  $http.get("../db/Students.json").then(function (reponse) {
+    $http.get("../db/Students.json").then(function (reponse) {
     $scope.student = reponse.data;
     // console.log($scope.student.datalogin.length);
-    if($scope.student.datalogin.length == 0) {
+    if ($scope.student.datalogin.length == 0) {
       $scope.formHidden = true;
       console.log("true");
     } else {
       $scope.formHidden = false;
       console.log("false");
     }
-    
+
     // register
     $scope.postdata = function (even) {
       var data = {
@@ -73,7 +76,7 @@ app.controller("register", function ($scope, $http) {
         schoolfee: "0",
         marks: "0",
       };
-      if (
+      if ($scope.fullname &&
         $scope.username &&
         $scope.password &&
         $scope.email &&
@@ -83,6 +86,7 @@ app.controller("register", function ($scope, $http) {
         $http.post("http://localhost:3000/students", data).then(
           function (res) {
             alert("Đăng kí thành công");
+            window.location = "http://127.0.0.1:5502/#/dangnhap";
           },
           function (error) {
             alert("Đăng kí thất bại");
@@ -96,40 +100,47 @@ app.controller("register", function ($scope, $http) {
     $scope.login = function (even) {
       username = $scope.username;
       password = $scope.password;
-
-      for (let index = 0; index < $scope.student.students.length; index++) {
-        if (
-          username == $scope.student.students[index].username &&
-          password == $scope.student.students[index].password
-        ) {
-          $scope.iduser = $scope.student.students[index].id;
-          // console.log("oke :", $scope.iduser);
-          var datas = {
-            id: $scope.student.students[index].id,
-            username: $scope.student.students[index].username,
-            password: $scope.student.students[index].password,
-            fullname: $scope.student.students[index].fullname,
-            email: $scope.student.students[index].email,
-            gender: $scope.student.students[index].gender,
-            birthday: $scope.student.students[index].birthday,
-            schoolfee: $scope.student.students[index].schoolfee,
-            marks: $scope.student.students[index].marks,
-          };
-          $http.post("http://localhost:3000/datalogin", datas).then(
-            function (res) {
-              alert("Đăng nhập thành công");
-              window.location = "http://127.0.0.1:5502/#/";
-            },
-            function (error) {
-              alert("Đăng nhập thất bại");
-              // console.log("hello");
-            }
-          );
-          break;
-        } else {
-          console.log("Loi vong lap (for)");
+      if (
+        username &&
+        password
+        
+      ){
+        for (let index = 0; index < $scope.student.students.length; index++) {
+          if (
+            username == $scope.student.students[index].username &&
+            password == $scope.student.students[index].password
+          ) {
+            $scope.iduser = $scope.student.students[index].id;
+            // console.log("oke :", $scope.iduser);
+            var datas = {
+              id: $scope.student.students[index].id,
+              username: $scope.student.students[index].username,
+              password: $scope.student.students[index].password,
+              fullname: $scope.student.students[index].fullname,
+              email: $scope.student.students[index].email,
+              gender: $scope.student.students[index].gender,
+              birthday: $scope.student.students[index].birthday,
+              schoolfee: $scope.student.students[index].schoolfee,
+              marks: $scope.student.students[index].marks,
+            };
+            
+            $http.post("http://localhost:3000/datalogin", datas).then(
+              function (res) {
+                alert("Đăng nhập thành công");
+                window.location = "http://127.0.0.1:5502/#/";
+              },
+              function (error) {
+                alert("Đăng nhập thất bại");
+                console.log("0");
+              }
+            );
+            break;
+          }
         }
+      }else{
+        alert("Đăng nhập thất bại2");
       }
+      
     };
     function checklogin() {
       if ($scope.iduser == "") {
@@ -155,6 +166,57 @@ app.controller("register", function ($scope, $http) {
           );
       });
     };
+    // update mk
+    $scope.updatepassword = function (even) {
+      $scope.dataupdate = [];
+      $http.get("http://localhost:3000/datalogin").then(function (reponse) {
+        $scope.dataupdate = reponse.data;
+        // console.log($scope.dataupdate);
+        var dataupdate = {
+          username: $scope.dataupdate[0].username,
+          password: $scope.newpassword,
+          fullname: $scope.dataupdate[0].fullname,
+          email: $scope.dataupdate[0].email,
+          gender: $scope.dataupdate[0].gender,
+          birthday: $scope.dataupdate[0].birthday,
+          schoolfee: $scope.dataupdate[0].schoolfee,
+          marks: $scope.dataupdate[0].marks,
+        };
+        if (
+          $scope.newpassword &&
+
+          $scope.password &&
+          $scope.newpassword2
+          
+        ) {
+          if ($scope.newpassword == $scope.newpassword2) {
+            $http
+              .put(
+                "http://localhost:3000/students/" + $scope.dataupdate[0].id + "",
+                dataupdate
+              )
+              .then(
+                function (res) {
+                  alert("Cập nhật thành công");
+                },
+                function (error) {
+                  alert("cập nhật thất bại");
+                }
+              );
+            $http.put(
+              "http://localhost:3000/datalogin/" + $scope.dataupdate[0].id + "",
+              dataupdate
+            );
+          } else {
+            alert("cập nhật thất bại");
+          }
+
+        } else {
+          alert("cập nhật thất bại");
+        }
+
+      });
+    };
     // update
     $scope.updatedata = function (even) {
       $scope.dataupdate = [];
@@ -171,23 +233,34 @@ app.controller("register", function ($scope, $http) {
           schoolfee: $scope.dataupdate[0].schoolfee,
           marks: $scope.dataupdate[0].marks,
         };
-        $http
-          .put(
-            "http://localhost:3000/students/" + $scope.dataupdate[0].id + "",
+        if (
+          $scope.fullname &&
+
+          $scope.email &&
+          $scope.gender &&
+          $scope.birthday
+        ) {
+          $http
+            .put(
+              "http://localhost:3000/students/" + $scope.dataupdate[0].id + "",
+              dataupdate
+            )
+            .then(
+              function (res) {
+                alert("Cập nhật thành công");
+              },
+              function (error) {
+                alert("cập nhật thất bại");
+              }
+            );
+          $http.put(
+            "http://localhost:3000/datalogin/" + $scope.dataupdate[0].id + "",
             dataupdate
-          )
-          .then(
-            function (res) {
-              alert("Cập nhật thành công");
-            },
-            function (error) {
-              alert("cập nhật thất bại");
-            }
           );
-        $http.put(
-          "http://localhost:3000/datalogin/" + $scope.dataupdate[0].id + "",
-          dataupdate
-        );
+        } else {
+          alert("cập nhật thất bại");
+        }
+
       });
     };
   });
@@ -203,7 +276,7 @@ app.controller("quizCtrl", function ($scope, $http, $routeParams, quizFactory) {
 
 //  controller tableQuestion ______________________________
 
-app.controller("tableQuestion", function ($scope) {});
+app.controller("tableQuestion", function ($scope) { });
 
 //  controller subjectCtrl ______________________________
 
@@ -261,14 +334,14 @@ app.directive("rowArticle", function (quizFactory, $http) {
     templateUrl: "./template/qizz-xayDungTrangWeb.html",
     link: function (scope, elem, attrs) {
       // console.log(Students.datalogin[0].id);
-      
+
       var sts = [];
 
       // Start
       scope.start = function () {
-      if (Students.datalogin.length < 1) {
-        alert("Vui lòng đăng nhập để tiến hành các khoá học!");
-      } else {
+        if (Students.datalogin.length < 1) {
+          alert("Vui lòng đăng nhập để tiến hành các khoá học!");
+        } else {
           scope.index = 0;
           scope.inProgess = true;
           scope.quizOver = false;
@@ -367,11 +440,11 @@ app.directive("rowArticle", function (quizFactory, $http) {
       // Luu ket qua
       scope.saveKQ = () => {
         let dataCourse = {
-          id : Students.dataCourse.length +1,
-          id_acc : Students.datalogin[0].id,
-          id_cource : questions.id,
-          nameCource : questions.name,
-          markCource : scope.score,
+          id: Students.dataCourse.length + 1,
+          id_acc: Students.datalogin[0].id,
+          id_cource: questions.id,
+          nameCource: questions.name,
+          markCource: scope.score,
         }
         $http.post("http://localhost:3000/dataCourse", dataCourse).then(
           function (res) {
