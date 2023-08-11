@@ -1,43 +1,43 @@
-var app = angular.module("myApp", ['ngRoute']);
+var app = angular.module("myApp", ["ngRoute"]);
 
 // Route _________________________________
 
 app.config(function ($routeProvider) {
   $routeProvider
-    .when('/', {
-      templateUrl: './home.html'
+    .when("/", {
+      templateUrl: "./home.html",
     })
-    .when('/thitracnghiem/:id/:name', {
-      templateUrl: './thitracnghiem.html',
-      controller: 'quizCtrl'
+    .when("/thitracnghiem/:id/:name", {
+      templateUrl: "./thitracnghiem.html",
+      controller: "quizCtrl",
     })
-    .when('/gioithieu', {
-      templateUrl: './gioithieu.html'
+    .when("/gioithieu", {
+      templateUrl: "./gioithieu.html",
     })
-    .when('/gopy', {
-      templateUrl: './gopy.html'
+    .when("/gopy", {
+      templateUrl: "./gopy.html",
     })
-    .when('/lienhe', {
-      templateUrl: './lienhe.html'
+    .when("/lienhe", {
+      templateUrl: "./lienhe.html",
     })
-    .when('/capnhattk', {
-      templateUrl: './capnhattk.html'
+    .when("/capnhattk", {
+      templateUrl: "./capnhattk.html",
     })
-    .when('/quenmk', {
-      templateUrl: './quenmk.html'
+    .when("/quenmk", {
+      templateUrl: "./quenmk.html",
     })
-    .when('/dangki', {
-      templateUrl: './dangki.html'
+    .when("/dangki", {
+      templateUrl: "./dangki.html",
     })
-    .when('/dangnhap', {
-      templateUrl: './dangnhap.html'
+    .when("/dangnhap", {
+      templateUrl: "./dangnhap.html",
     })
-    .when('/thongtintk', {
-      templateUrl: './thongtintaikhoan.html'
+    .when("/thongtintk", {
+      templateUrl: "./thongtintaikhoan.html",
     })
     .otherwise({
-      redirectTo: "/"
-    })
+      redirectTo: "/",
+    });
 });
 
 //  controller register ______________________________
@@ -53,19 +53,18 @@ app.controller("register", function ($scope, $http) {
       gender: $scope.gender,
       birthday: $scope.birthday,
       schoolfee: "0",
-      marks:"0",
-
-    }
-    $http.post("http://localhost:3000/students",data)
-    .then(function (res) {
-      alert("Đăng kí thành công");
-    },function (error) {
-      alert("Đăng kí thất bại");
-    })
-  }
+      marks: "0",
+    };
+    $http.post("http://localhost:3000/students", data).then(
+      function (res) {
+        alert("Đăng kí thành công");
+      },
+      function (error) {
+        alert("Đăng kí thất bại");
+      }
+    );
+  };
 });
-
-
 
 //  controller quizCtrl ______________________________
 
@@ -75,15 +74,9 @@ app.controller("quizCtrl", function ($scope, $http, $routeParams, quizFactory) {
   // });
 });
 
-
-
-
 //  controller tableQuestion ______________________________
 
-app.controller("tableQuestion", function($scope) {
-
-});
-
+app.controller("tableQuestion", function ($scope) {});
 
 //  controller subjectCtrl ______________________________
 
@@ -121,15 +114,7 @@ app.controller("subjectCtrl", function ($scope, $http) {
     };
     // console.log($scope.begin);
   });
-
 });
-
-
-
-
-
-
-
 
 //  directive______________________________
 
@@ -139,13 +124,13 @@ app.directive("rowArticle", function (quizFactory) {
     scope: {},
     templateUrl: "./template/qizz-xayDungTrangWeb.html",
     link: function (scope, elem, attrs) {
-
       var sts = [];
       // var answers = {
       //   id: answ
       // };
-
+      
       var sttQ = 1;
+      sts.id = 1;
 
       // Start
       scope.start = function () {
@@ -155,7 +140,7 @@ app.directive("rowArticle", function (quizFactory) {
         scope.time = 60 * 10;
         scope.timeOut();
         scope.getQuestion();
-        scope.paginations();
+        // scope.paginations();
       };
       // Reset
       scope.reset = function () {
@@ -166,8 +151,9 @@ app.directive("rowArticle", function (quizFactory) {
       };
       // getQuestion
       scope.getQuestion = function () {
-        let quiz = quizFactory.getQuestion(scope.index);
+        var quiz = quizFactory.getQuestion(scope.index);
         if (quiz) {
+          scope.id_Q = quiz.Id;
           scope.question = quiz.Text;
           scope.options = quiz.Answers;
           scope.answer = quiz.AnswerId;
@@ -175,25 +161,26 @@ app.directive("rowArticle", function (quizFactory) {
         } else {
           scope.quizOver = true;
         }
-
+        
         if (scope.a == 0) {
           quiz = 0;
           scope.quizOver = true;
-          // console.log("abc");
         }
+        console.log(scope.answer);
       };
+      // scope.domain = new scope.getQuestion();
+      
       // checkAnswer
       scope.checkAnswer = function () {
         // alert("answer");
         if (!$("input[name = answer]:checked").length) return;
         var answ = $("input[name = answer]:checked").val();
 
-        
-        // answers.push(angular.copy(answ));
-        // console.log(answers);
         sts.push(angular.copy(answ));
-        console.log(sts);
-
+        console.log("array(sts) la :",sts);
+        scope.sts = sts;
+        
+        scope.sts.id ++;
         if (answ == scope.answer) {
           // alert("Chinh xac !");
           scope.score++;
@@ -233,10 +220,10 @@ app.directive("rowArticle", function (quizFactory) {
         }
       };
 
-      scope.paginations = function () {
-        // document.write("<p>hello</p>");
-        // console.log(questions.length);
-      };
+      // scope.paginations = function () {
+      //   // document.write("<p>hello</p>");
+      //   // console.log(questions.length);
+      // };
 
       // scope.reset
       scope.reset();
